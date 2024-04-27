@@ -3,3 +3,51 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.cover {
+    overflow: hidden;
+    width: 100%;
+    height: 15.5rem;
+    background-image: url("https://y.qq.com/music/common/upload/t_area/5913772.png?max_age=2592000");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-left: 1.5rem;
+    h1 {
+        color: #ffffffe6;
+        font-size: 1.75rem;
+        letter-spacing: 0.05rem;
+        margin-top: 27%;
+        margin-bottom: 1.5rem;
+    }
+    a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.8);
+        background-color: #f1cc5a;
+        padding: 0.4rem 0.9rem;
+        border-radius: 2rem;
+        font-size: 1rem;
+    }
+}
+
+.keen-slider {
+    margin-top: -1.5rem;
+}
+.keen-slider__slide {
+    height: 6rem;
+    a {
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        display: block;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 0.5rem;
+        }
+    }
+}
+
+.number-slide1,
+.number-slide2 {
+    background: transparent;
+}
