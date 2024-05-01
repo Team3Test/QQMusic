@@ -4,13 +4,23 @@
     box-sizing: border-box;
 }
 
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+// 头部背景
 .cover {
     overflow: hidden;
     width: 100%;
-    height: 15.5rem;
+    height: 14.8rem;
     background-image: url("https://y.qq.com/music/common/upload/t_area/5913772.png?max_age=2592000");
     background-size: 100%;
     background-repeat: no-repeat;
+    background-position: center;
     padding-left: 1.5rem;
     h1 {
         color: #ffffffe6;
@@ -29,25 +39,297 @@
     }
 }
 
-.keen-slider {
-    margin-top: -1.5rem;
-}
-.keen-slider__slide {
-    height: 6rem;
-    a {
-        width: 90%;
-        height: 100%;
-        margin: 0 auto;
-        display: block;
-        img {
-            width: 100%;
+// 头部轮播
+#slider01 {
+    margin-top: -0.6rem;
+    .keen-slider__slide {
+        height: 6rem;
+        a {
+            width: 90%;
             height: 100%;
-            border-radius: 0.5rem;
+            margin: 0 auto;
+            display: block;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 0.5rem;
+            }
+        }
+    }
+    .number-slide1,
+    .number-slide2 {
+        background: transparent;
+    }
+}
+
+// 栏目
+.chill,
+.dopamine,
+.relax,
+.hiphop,
+.sleep,
+.checking {
+    margin-top: 1.8rem;
+    .HTitle {
+        width: 89%;
+        margin: 0 auto 0.8rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .listCon {
+        .lists {
+            padding: 0 1.3rem;
+            overflow: auto;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            li {
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+                .musicInfo {
+                    width: 6.6rem;
+                    position: relative;
+                    .musicCover {
+                        border-radius: 0.5rem;
+                        width: 100%;
+                        height: 6.6rem;
+                        object-fit: cover;
+                    }
+                    #playButton {
+                        position: absolute;
+                        top: 5.4rem;
+                        right: 0.3rem;
+                        width: 1rem;
+                        height: 1rem;
+                        fill: white;
+                    }
+                    .playInfo {
+                        position: absolute;
+                        top: 5.4rem;
+                        left: 0.3rem;
+                        display: inline-flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        svg {
+                            width: 0.8rem;
+                            height: 0.8rem;
+                            fill: white;
+                            margin-right: 0.15rem;
+                        }
+                        span {
+                            font-size: 0.7rem;
+                            color: white;
+                        }
+                    }
+                }
+                .title,
+                .subTitle {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .title {
+                    width: 100%;
+                    font-size: 0.85rem;
+                    color: rgba(26, 26, 26, 1);
+                    font-weight: 400;
+                }
+                .subTitle {
+                    font-size: 0.75rem;
+                    color: rgba(26, 26, 26, 0.5);
+                    margin-top: 0.1rem;
+                }
+                .subTitleMore {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: initial;
+                }
+            }
         }
     }
 }
 
-.number-slide1,
-.number-slide2 {
-    background: transparent;
+//christmas
+.christmas {
+    margin-top: 1.8rem;
+    .HTitle {
+        width: 89%;
+        margin: 0 auto 0.8rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    #slider02 {
+        .listCon {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            .christmasItem {
+                padding-left: 1.2rem;
+                &:not(:first-child) {
+                    margin-top: 0.8rem;
+                }
+                .itemCon {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    .itemCover {
+                        width: 4rem;
+                        height: 4rem;
+                        img {
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 0.3rem;
+                        }
+                    }
+                    .text {
+                        margin-left: 0.5rem;
+                        h4,
+                        p {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        h4 {
+                            font-size: 0.85rem;
+                            color: rgba(26, 26, 26, 1);
+                            font-weight: 400;
+                        }
+                        p {
+                            font-size: 0.75rem;
+                            color: rgba(26, 26, 26, 0.5);
+                            margin-top: 0.15rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//checking
+.checking {
+    .listCon .lists li .musicInfo {
+        width: 10rem;
+        .musicCover {
+            height: 5.6rem;
+        }
+        .playInfo {
+            top: 4.4rem;
+        }
+        #playButton {
+            display: none;
+        }
+    }
+}
+
+//atmosphere
+.atmosphere {
+    margin-top: 1.8rem;
+    .HTitle {
+        width: 89%;
+        margin: 0 auto 0.8rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .lists {
+        padding: 0 1.3rem;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .item {
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+            .wrap {
+                width: 5.3rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .itemCover {
+                width: 4.5rem;
+                height: 4.5rem;
+                overflow: hidden;
+                img {
+                    border-radius: 100%;
+                    width: 100%;
+                }
+            }
+            .itemInfo {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                p {
+                    text-align: center;
+                    font-size: 0.85rem;
+                    margin-top: 0.15rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .follow {
+                    color: rgba(26, 26, 26, 1);
+                    font-size: 0.8rem;
+                    background-color: #ededed;
+                    padding: 0.2rem 1rem;
+                    border-radius: 0.7rem;
+                    margin-top: 0.25rem;
+                }
+            }
+        }
+    }
+}
+
+//comments
+.comments {
+    margin-top: 1.8rem;
+    .HTitle {
+        width: 89%;
+        margin: 0 auto 1.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .input {
+        width: 89%;
+        text-align: center;
+        padding: 0.4rem;
+        margin: 0 auto 1.2rem;
+        color: rgba(26, 26, 26, 1);
+        background-color: #ededed;
+        border-radius: 1.5rem;
+        font-size: 0.85rem;
+    }
+    .count {
+        margin: 0.5rem 0 1.2rem 1.3rem;
+        span {
+            &:first-child {
+                font-weight: 600;
+            }
+        }
+    }
+    .all {
+        margin: 0.5rem 0 1.5rem 1.3rem;
+        font-weight: 600;
+    }
+    .commentItem {
+        
+    }
 }

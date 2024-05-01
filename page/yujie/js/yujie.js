@@ -1,6 +1,7 @@
 var data = {
     chill: {
         title: "Chill一下满血复活",
+        hasPlayCount: 0,
         card: [
             {
                 chillId: 1,
@@ -49,82 +50,89 @@ var data = {
     christmas: {
         title: "圣诞节氛围感BGM",
         card: [
-            {
-                christmasId: 1,
-                title: "Am Kaminknistern",
-                cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M000001MN7wZ4WEomp_1.jpg",
-                singername: "Kainbeats",
-                albumname: "Lofi Girl - Christmas 2023",
-                hrefUrl: "",
-            },
-            {
-                christmasId: 2,
-                title: "Christmas by the Fireplace",
-                cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M000001Rp82o175Uhj_1.jpg",
-                singername: "Sleepy Tom",
-                albumname: "Christmas Lofi",
-                hrefUrl: "",
-            },
-            {
-                christmasId: 3,
-                title: "Waiting By The Fireplace",
-                cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M000001MN7wZ4WEomp_1.jpg",
-                singername: "Thaehan",
-                albumname: "Lofi Girl - Christmas 2023",
-                hrefUrl: "",
-            },
-            {
-                christmasId: 4,
-                title: "That Time Of The Year",
-                cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M000001MN7wZ4WEomp_1.jpg",
-                singername: "No Spirit",
-                albumname: "Lofi Girl - Christmas 2023",
-                hrefUrl: "",
-            },
-            {
-                christmasId: 5,
-                title: "Christmas",
-                cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M0000027Wpml0L2aS9_1.jpg",
-                singername: "LoFi Waiter",
-                albumname: "Lofi Christmas",
-                hrefUrl: "",
-            },
-            {
-                christmasId: 6,
-                title: "Mistletoe Wonder",
-                cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M000001MN7wZ4WEomp_1.jpg",
-                singername: "Lucid Keys",
-                albumname: "Lofi Girl - Christmas 2023",
-                hrefUrl: "",
-            },
-            {
-                christmasId: 7,
-                title: "Snowballs",
-                cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M000001MN7wZ4WEomp_1.jpg",
-                singername: "xander./Lucid Keys",
-                albumname: "Lofi Girl - Christmas 2023",
-                hrefUrl: "",
-            },
-            {
-                christmasId: 8,
-                title: "White Christmas",
-                cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M000002X5QrF4QBqdZ_1.jpg",
-                singername: "Bflynn",
-                albumname: "Hbdj: A Lofi Christmas",
-                hrefUrl: "",
-            },
-            {
-                christmasId: 9,
-                title: "Letter To Santa",
-                cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M000001MN7wZ4WEomp_1.jpg",
-                singername: "Thaehan",
-                albumname: "Lofi Girl - Christmas 2023",
-                hrefUrl: "",
-            },
+            [
+                {
+                    christmasId: 1,
+                    title: "Am Kaminknistern",
+                    cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M000001MN7wZ4WEomp_1.jpg",
+                    singername: "Kainbeats",
+                    albumname: "Lofi Girl - Christmas 2023",
+                    hrefUrl: "",
+                },
+                {
+                    christmasId: 2,
+                    title: "Christmas by the Fireplace",
+                    cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M000001Rp82o175Uhj_1.jpg",
+                    singername: "Sleepy Tom",
+                    albumname: "Christmas Lofi",
+                    hrefUrl: "",
+                },
+                {
+                    christmasId: 3,
+                    title: "Waiting By The Fireplace",
+                    cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M000001MN7wZ4WEomp_1.jpg",
+                    singername: "Thaehan",
+                    albumname: "Lofi Girl - Christmas 2023",
+                    hrefUrl: "",
+                },
+            ],
+            [
+                {
+                    christmasId: 4,
+                    title: "That Time Of The Year",
+                    cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M000001MN7wZ4WEomp_1.jpg",
+                    singername: "No Spirit",
+                    albumname: "Lofi Girl - Christmas 2023",
+                    hrefUrl: "",
+                },
+                {
+                    christmasId: 5,
+                    title: "Christmas",
+                    cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M0000027Wpml0L2aS9_1.jpg",
+                    singername: "LoFi Waiter",
+                    albumname: "Lofi Christmas",
+                    hrefUrl: "",
+                },
+                {
+                    christmasId: 6,
+                    title: "Mistletoe Wonder",
+                    cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M000001MN7wZ4WEomp_1.jpg",
+                    singername: "Lucid Keys",
+                    albumname: "Lofi Girl - Christmas 2023",
+                    hrefUrl: "",
+                },
+            ],
+            [
+                {
+                    christmasId: 7,
+                    title: "Snowballs",
+                    cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M000001MN7wZ4WEomp_1.jpg",
+                    singername: "xander./Lucid Keys",
+                    albumname: "Lofi Girl - Christmas 2023",
+                    hrefUrl: "",
+                },
+                {
+                    christmasId: 8,
+                    title: "White Christmas",
+                    cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M000002X5QrF4QBqdZ_1.jpg",
+                    singername: "Bflynn",
+                    albumname: "Hbdj: A Lofi Christmas",
+                    hrefUrl: "",
+                },
+                {
+                    christmasId: 9,
+                    title: "Letter To Santa",
+                    cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M000001MN7wZ4WEomp_1.jpg",
+                    singername: "Thaehan",
+                    albumname: "Lofi Girl - Christmas 2023",
+                    hrefUrl: "",
+                },
+            ],
         ],
     },
     dopamine: {
         title: "多巴胺蒸汽波发射ing",
+        hasPlayCount: 1,
         card: [
             {
                 dopamineId: 1,
@@ -136,7 +144,7 @@ var data = {
             {
                 dopamineId: 2,
                 title: "今 天 要 再 蒸 汽 一 點 喲",
-                cover: "http://qpic.y.qq.com/music_cover/dqA75cm8geDw9KI3sHeib5y3iakiceFo3P45glkGtwiaf3wyPxhWWJhIcw/300?n=1",
+                cover: "https://qpic.y.qq.com/music_cover/JwclnudaObJXGgJOkTPBGcZkia3nQbicQYtSJKCy4f9K1JMNkQZMLv4A/300?n=1",
                 playNumber: 31628,
                 hrefUrl: "",
             },
@@ -219,6 +227,7 @@ var data = {
     },
     relax: {
         title: "学习工作也可以很松弛",
+        hasPlayCount: 1,
         card: [
             {
                 relaxId: 1,
@@ -266,6 +275,7 @@ var data = {
     },
     hiphop: {
         title: "当Hip-Hop遇见Jazz",
+        hasPlayCount: 0,
         card: [
             {
                 hiphopId: 1,
@@ -313,47 +323,48 @@ var data = {
     },
     sleep: {
         title: "深度放松伴你入眠",
+        hasPlayCount: 1,
         card: [
             {
                 sleepId: 1,
                 title: "【Lofi Girl】睡前助眠放松",
                 cover: "http://qpic.y.qq.com/music_cover/U1KMglFEuN5fUO6dLwsiaZSvOhMxPTdfCHib4MKWYvC1wSAQ0BibWdgF9vovuCZJWgg/300?n=1",
-                cnt: 192103,
+                playNumber: 192103,
                 hrefUrl: "",
             },
             {
                 sleepId: 2,
                 title: "Lofi舒憩舱☾深度沉眠chill地带",
                 cover: "http://qpic.y.qq.com/music_cover/VgJ9yB2pf097libEdIw2frkZ7DS9ZeArwibRQbrKyCqxWtIDxjqnFv2g/300?n=1",
-                cnt: 22206,
+                playNumber: 22206,
                 hrefUrl: "",
             },
             {
                 sleepId: 3,
                 title: "Lo-fi摇篮曲✨跌入夜氛围佳境",
                 cover: "http://qpic.y.qq.com/music_cover/ClOO08libib30HrDic0JlEwKsY4ic5lr3Ke9GicaBXK3UwSEPwHdwUaDkKQ/300?n=1",
-                cnt: 49547,
+                playNumber: 49547,
                 hrefUrl: "",
             },
             {
                 sleepId: 4,
                 title: "迷醉lofi：枕边的午夜臆想症",
                 cover: "http://qpic.y.qq.com/music_cover/8us3IjqPib6Aficmrq3AXWiaI2CTMDzUqdGSCHAS6EiaZnRbTlENr52F8Q/300?n=1",
-                cnt: 35258,
+                playNumber: 35258,
                 hrefUrl: "",
             },
             {
                 sleepId: 5,
                 title: "Lo-Fi助眠剂｜一副音药就见效",
                 cover: "http://qpic.y.qq.com/music_cover/bp55dcibXqUjaQjwt6gP1ia4SicYBAWPFHsnHojCIygiaJibNa88Z3Z6yFg/300?n=1",
-                cnt: 58107,
+                playNumber: 58107,
                 hrefUrl: "",
             },
             {
                 sleepId: 6,
                 title: "助眠Lofi：舒缓节拍击碎失眠因子",
                 cover: "http://qpic.y.qq.com/music_cover/7rwpibGibr1ibJjia8cQpOUHaNHZsk6Y1fAAu5a8Yll9B8CHic5NabxQxdg/300?n=1",
-                cnt: 30710,
+                playNumber: 30710,
                 hrefUrl: "",
             },
         ],
@@ -375,25 +386,25 @@ var data = {
             },
             {
                 atmosphereId: 3,
-                title: "Keyoung Fresh",
+                title: "Keyoung",
                 cover: "http://y.gtimg.cn/music/photo_new/T001R150x150M00000347KwV0Kz2Zv_9.jpg",
                 hrefUrl: "",
             },
             {
                 atmosphereId: 4,
-                title: "CureGirl治愈学姐",
+                title: "治愈学姐",
                 cover: "http://y.gtimg.cn/music/photo_new/T001R150x150M000003ACT1v0B32TQ_2.jpg",
                 hrefUrl: "",
             },
             {
                 atmosphereId: 5,
-                title: "elijah who",
+                title: "elijah",
                 cover: "http://y.gtimg.cn/music/photo_new/T001R150x150M000001jTei803h5NM_2.jpg",
                 hrefUrl: "",
             },
             {
                 atmosphereId: 6,
-                title: "In Love With a Ghost",
+                title: "Ghost",
                 cover: "http://y.gtimg.cn/music/photo_new/T001R150x150M000003J8bkg1P9X1V_2.jpg",
                 hrefUrl: "",
             },
@@ -406,6 +417,7 @@ var data = {
         ],
     },
     comments: {
+        title: "今天你Chill了吗？",
         item: [
             {
                 commentId: 1,
@@ -463,3 +475,152 @@ var data = {
         ],
     },
 };
+
+show("chill", false, true);
+showChristmas();
+show("dopamine", true, false);
+show("checking", true, false);
+show("relax", true, false);
+show("hiphop", false, true);
+show("sleep", true, false);
+showAtmosphere();
+showComments();
+
+//中转函数
+//参数一：栏目名字; 参数二：是否有播放数量; 参数三：是否有子标题
+function show(name, hasPLayCount, hasSubTitle) {
+    switch (name) {
+        case "chill":
+            showItem(name, data.chill, hasPLayCount, hasSubTitle);
+            break;
+        case "dopamine":
+            showItem(name, data.dopamine, hasPLayCount, hasSubTitle);
+            break;
+        case "checking":
+            showItem(name, data.checking, hasPLayCount, hasSubTitle);
+            break;
+        case "relax":
+            showItem(name, data.relax, hasPLayCount, hasSubTitle);
+            break;
+        case "hiphop":
+            showItem(name, data.hiphop, hasPLayCount, hasSubTitle);
+            break;
+        case "sleep":
+            showItem(name, data.sleep, hasPLayCount, hasSubTitle);
+            break;
+    }
+}
+
+//渲染
+function showItem(name, subData, hasPLayCount, hasSubTitle) {
+    var HTitle = document.querySelector(`.${name} .HTitle`);
+    var list = document.querySelector(`.${name} .lists`);
+    HTitle.innerHTML = subData.title;
+    for (i = 0; i < subData.card.length; i++) {
+        list.innerHTML += `
+            <li>
+                <a href="${subData.card[i].hrefUrl}">
+                    <div class="musicInfo">
+                        <img class="musicCover" src="${subData.card[i].cover}" />
+                        <h3 class="title">${subData.card[i].title}</h3>
+                        <p class="subTitle">${subData.card[i].subtitle}</p>
+                        <svg id="playButton" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+                        </svg>
+                        <div class="playInfo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
+                                <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5"/>
+                            </svg>
+                            <span class="playCount">${(subData.card[i].playNumber / 10000).toFixed(1).split(".")[1] == 0 ? (subData.card[i].playNumber / 10000).toFixed(0) : (subData.card[i].playNumber / 10000).toFixed(1)} 万</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        `;
+    }
+
+    if (hasPLayCount == false) {
+        var playInfos = document.querySelectorAll(`.${name} .playInfo`);
+        playInfos.forEach((element) => {
+            element.parentNode.removeChild(element);
+        });
+    }
+
+    if (hasSubTitle == false) {
+        var subTitles = document.querySelectorAll(`.${name} .subTitle`);
+        var titles = document.querySelectorAll(`.${name} .title`);
+        subTitles.forEach((element) => {
+            element.parentNode.removeChild(element);
+        });
+        titles.forEach((element) => {
+            element.classList.add("subTitleMore");
+        });
+    }
+}
+
+//渲染christmas
+function showChristmas() {
+    var slider02 = document.getElementById("slider02");
+    var HTitle = document.querySelector(".christmas .HTitle");
+    HTitle.innerHTML = data.christmas.title;
+    for (i = 0; i < data.christmas.card.length; i++) {
+        slider02.innerHTML += `
+            <div class="keen-slider__slide">
+                <ul class="listCon"></ul>
+            </div>
+        `;
+        var listCons = document.querySelectorAll("#slider02 .listCon");
+        for (j = 0; j < data.christmas.card[i].length; j++) {
+            listCons[i].innerHTML += `
+            <li class="christmasItem">
+            <a href="" class="itemCon">
+                <div class="itemCover">
+                    <img src="${data.christmas.card[i][j].cover}" alt="" />
+                </div>
+                <div class="text">
+                    <h4>${data.christmas.card[i][j].title}</h4>
+                    <p>
+                        <span>${data.christmas.card[i][j].singername}</span>
+                        &nbsp;·&nbsp;
+                        <span>${data.christmas.card[i][j].albumname}</span>
+                    </p>
+                </div>
+            </a>
+            </li>
+            `;
+        }
+    }
+}
+
+//渲染atmosphere
+function showAtmosphere() {
+    var HTitle = document.querySelector(".atmosphere .HTitle");
+    var lists = document.querySelector(".atmosphere .lists");
+    HTitle.innerHTML = data.atmosphere.title;
+    for (i = 0; i < data.atmosphere.card.length; i++) {
+        lists.innerHTML += `
+        <li class="item">
+            <a>
+                <div class="wrap">
+                    <div class="itemCover">
+                        <img src="${data.atmosphere.card[i].cover}" alt="" />
+                    </div>
+                    <div class="itemInfo">
+                        <p>${data.atmosphere.card[i].title}</p>
+                        <span data-expertId="${data.atmosphere.card[i].atmosphereId}" class="follow">关注</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        `;
+    }
+    var follows = document.querySelectorAll(".follow");
+    for (let j = 0; j < follows.length; j++) {
+        follows[j].addEventListener("click", (e) => {
+            console.log(e.target);
+        });
+    }
+}
+
+//comments
+function showComments() {}
