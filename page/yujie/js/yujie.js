@@ -424,7 +424,6 @@ var data = {
                 commentTime: "2023-09-27 17:37",
                 username: "场景任意门",
                 cover: "https://pic6.y.qq.com/qqmusic/avatar/6f7745356f7736694e6534736f632a2a-1673945651/140",
-                vipLevel: 7,
                 commentText: "lofi girl终于有了，之前就很喜欢在优tube上听，这下终于不用翻来翻去的了。😂",
                 location: "福建",
                 like: 5,
@@ -447,7 +446,6 @@ var data = {
                 commentTime: "2023-10-18 10:19",
                 username: "mojo",
                 cover: "https://thirdqq.qlogo.cn/g?b=sdk&k=LcOYJia0sD7HT8endZW0ZIQ&s=140&t=1556660164",
-                vipLevel: 0,
                 commentText: "十一到处人挤人，宅家里还好有这些Chill的音乐，高级氛围感拉满了！",
                 location: "北京",
                 like: 19,
@@ -459,7 +457,6 @@ var data = {
                 commentTime: "2024-02-09 08:45",
                 username: "...T",
                 cover: "https://thirdqq.qlogo.cn/g?b=sdk&k=8N2K6bxnN6VNSYzYiauNRrA&kti=ZioITAAAAAE&s=140&t=1712835932",
-                vipLevel: 4,
                 commentText: "我已经上班了三天，所以请不要对我说假期余额不足",
                 location: "辽宁",
                 like: 10,
@@ -511,7 +508,7 @@ function show(name, hasPLayCount, hasSubTitle) {
     }
 }
 
-//渲染
+//渲染栏目
 function showItem(name, subData, hasPLayCount, hasSubTitle) {
     var HTitle = document.querySelector(`.${name} .HTitle`);
     var list = document.querySelector(`.${name} .lists`);
@@ -573,7 +570,7 @@ function showChristmas() {
         for (j = 0; j < data.christmas.card[i].length; j++) {
             listCons[i].innerHTML += `
             <li class="christmasItem">
-            <a href="" class="itemCon">
+            <a href="${data.christmas.card[i][j].hrefUrl}" class="itemCon">
                 <div class="itemCover">
                     <img src="${data.christmas.card[i][j].cover}" alt="" />
                 </div>
@@ -615,12 +612,80 @@ function showAtmosphere() {
         `;
     }
     var follows = document.querySelectorAll(".follow");
+    var isFollow = false;
     for (let j = 0; j < follows.length; j++) {
         follows[j].addEventListener("click", (e) => {
-            console.log(e.target);
+            if (isFollow == false) {
+                follows[j].innerHTML = "已关注";
+                follows[j].style.color = "rgba(26,26,26,.16)";
+                isFollow = true;
+            } else {
+                follows[j].innerHTML = "关注";
+                follows[j].style.color = "rgba(26,26,26)";
+                isFollow = false;
+            }
         });
     }
 }
 
-//comments
-function showComments() {}
+//渲染comments
+function showComments() {
+    var lists = document.querySelector(".comments .lists");
+    var HTitle = document.querySelector(".comments .HTitle");
+    var allCount = document.querySelector(".comments .allCount");
+    HTitle.innerHTML = data.comments.title;
+    allCount.innerHTML = data.comments.item.length;
+    for (i = 0; i < data.comments.item.length; i++) {
+        lists.innerHTML += `
+            <li class="commentItem">
+                <div class="ccon">
+                    <div class="ccover">
+                        <img src="${data.comments.item[i].cover}" alt="" />
+                    </div>
+                    <div class="cinfo">
+                        <h3>${data.comments.item[i].username}</h3>
+                        <span class="time">${data.comments.item[i].commentTime}</span>
+                        <p class="ctext">${data.comments.item[i].commentText}</p>
+                        <div class="subComment""></div>
+                        <div class="cl">
+                            <div class="cl1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                                </svg>
+                                <span>${data.comments.item[i].location}</span>
+                            </div>
+                            <div class="cl2">
+                                <span class="likeCount">${data.comments.item[i].like}</span>
+                                <a class="like">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2 2 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a10 10 0 0 0-.443.05 9.4 9.4 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a9 9 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.2 2.2 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.9.9 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"
+                                        />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        `;
+        if (data.comments.item[i].hasSubComment == 1) {
+            var subComments = document.querySelectorAll(".subComment");
+            subComments[i].style.display = "block";
+            for (j = 0; j < data.comments.item[i].subComment.length; j++) {
+                subComments[i].innerHTML += `
+                    <p><span>${data.comments.item[i].subComment[j].subUser}：</span>${data.comments.item[i].subComment[j].subText}</p>
+                `;
+            }
+        }
+    }
+
+    var like = document.querySelectorAll(".like");
+    var likeCount = document.querySelectorAll(".likeCount");
+    for (let k = 0; k < like.length; k++) {
+        like[k].addEventListener("click", (e) => {
+            data.comments.item[k].like++;
+            likeCount[k].innerHTML++;
+        });
+    }
+}

@@ -8,8 +8,8 @@
 #headerNav_1 {
     background-color: #f8f8f8;
     width: 100%;
-    padding: 0.5rem 0;
-    position: sticky;
+    padding: 0.4rem 0;
+    position: fixed;
     top: 0;
     z-index: 9999;
     ul {
@@ -31,18 +31,18 @@
         align-items: center;
         width: 75%;
         img {
-            width: 2.1rem;
-            height: 2.1rem;
+            width: 1.7rem;
+            height: 1.7rem;
         }
         ul {
-            width: 80%;
-            font-size: 0.9rem;
+            width: 90%;
+            font-size: 0.8rem;
             margin-left: 0.5rem;
             display: flex;
             justify-content: start;
             align-items: center;
             li {
-                width: 47%;
+                width: 50%;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 -webkit-line-clamp: 1;
@@ -56,12 +56,12 @@
         }
     }
     .look {
-        padding: 0.4rem 0.8rem;
+        padding: 0.16rem 0.4rem 0.2rem;
         line-height: 0.75rem;
         border: solid 1px #d8d8d8;
         border-radius: 0.8rem;
         a {
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             color: #808080;
         }
     }

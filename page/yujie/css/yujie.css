@@ -15,34 +15,34 @@ a {
 .cover {
   overflow: hidden;
   width: 100%;
-  height: 14.8rem;
+  height: 15rem;
   background-image: url("https://y.qq.com/music/common/upload/t_area/5913772.png?max_age=2592000");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  padding-left: 1.5rem;
+  padding-left: 1.2rem;
 }
 .cover h1 {
   color: rgba(255, 255, 255, 0.9019607843);
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   letter-spacing: 0.05rem;
-  margin-top: 27%;
-  margin-bottom: 1.5rem;
+  margin-top: 38%;
+  margin-bottom: 1.2rem;
 }
 .cover a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8);
   background-color: #f1cc5a;
-  padding: 0.4rem 0.9rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 2rem;
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 
 #slider01 {
-  margin-top: -0.6rem;
+  margin-top: -1.6rem;
 }
 #slider01 .keen-slider__slide {
-  height: 6rem;
+  height: 5rem;
 }
 #slider01 .keen-slider__slide a {
   width: 90%;
@@ -66,7 +66,7 @@ a {
 .hiphop,
 .sleep,
 .checking {
-  margin-top: 1.8rem;
+  margin-top: 1.6rem;
 }
 .chill .HTitle,
 .dopamine .HTitle,
@@ -75,10 +75,11 @@ a {
 .sleep .HTitle,
 .checking .HTitle {
   width: 89%;
-  margin: 0 auto 0.8rem;
+  margin: 0 auto 0.7rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 0.9rem;
 }
 .chill .listCon .lists,
 .dopamine .listCon .lists,
@@ -86,7 +87,7 @@ a {
 .hiphop .listCon .lists,
 .sleep .listCon .lists,
 .checking .listCon .lists {
-  padding: 0 1.3rem;
+  padding: 0 1rem;
   overflow: auto;
   display: flex;
   justify-content: space-between;
@@ -106,7 +107,7 @@ a {
 .hiphop .listCon .lists li:not(:last-child),
 .sleep .listCon .lists li:not(:last-child),
 .checking .listCon .lists li:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: 0.6rem;
 }
 .chill .listCon .lists li .musicInfo,
 .dopamine .listCon .lists li .musicInfo,
@@ -114,7 +115,7 @@ a {
 .hiphop .listCon .lists li .musicInfo,
 .sleep .listCon .lists li .musicInfo,
 .checking .listCon .lists li .musicInfo {
-  width: 6.6rem;
+  width: 5rem;
   position: relative;
 }
 .chill .listCon .lists li .musicInfo .musicCover,
@@ -125,7 +126,7 @@ a {
 .checking .listCon .lists li .musicInfo .musicCover {
   border-radius: 0.5rem;
   width: 100%;
-  height: 6.6rem;
+  height: 5rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -136,8 +137,8 @@ a {
 .sleep .listCon .lists li .musicInfo #playButton,
 .checking .listCon .lists li .musicInfo #playButton {
   position: absolute;
-  top: 5.4rem;
-  right: 0.3rem;
+  top: 3.8rem;
+  right: 0.2rem;
   width: 1rem;
   height: 1rem;
   fill: white;
@@ -149,7 +150,7 @@ a {
 .sleep .listCon .lists li .musicInfo .playInfo,
 .checking .listCon .lists li .musicInfo .playInfo {
   position: absolute;
-  top: 5.4rem;
+  top: 3.9rem;
   left: 0.3rem;
   display: inline-flex;
   justify-content: space-between;
@@ -172,7 +173,7 @@ a {
 .hiphop .listCon .lists li .musicInfo .playInfo span,
 .sleep .listCon .lists li .musicInfo .playInfo span,
 .checking .listCon .lists li .musicInfo .playInfo span {
-  font-size: 0.7rem;
+  font-size: 0.5rem;
   color: white;
 }
 .chill .listCon .lists li .title,
@@ -198,7 +199,7 @@ a {
 .sleep .listCon .lists li .title,
 .checking .listCon .lists li .title {
   width: 100%;
-  font-size: 0.85rem;
+  font-size: 0.65rem;
   color: rgb(26, 26, 26);
   font-weight: 400;
 }
@@ -208,7 +209,7 @@ a {
 .hiphop .listCon .lists li .subTitle,
 .sleep .listCon .lists li .subTitle,
 .checking .listCon .lists li .subTitle {
-  font-size: 0.75rem;
+  font-size: 0.6rem;
   color: rgba(26, 26, 26, 0.5);
   margin-top: 0.1rem;
 }
@@ -227,14 +228,15 @@ a {
 }
 
 .christmas {
-  margin-top: 1.8rem;
+  margin-top: 1.6rem;
 }
 .christmas .HTitle {
   width: 89%;
-  margin: 0 auto 0.8rem;
+  margin: 0 auto 0.7rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 0.9rem;
 }
 .christmas #slider02 .listCon {
   display: flex;
@@ -254,8 +256,8 @@ a {
   align-items: center;
 }
 .christmas #slider02 .listCon .christmasItem .itemCon .itemCover {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
 }
 .christmas #slider02 .listCon .christmasItem .itemCon .itemCover img {
   width: 100%;
@@ -273,41 +275,42 @@ a {
   text-overflow: ellipsis;
 }
 .christmas #slider02 .listCon .christmasItem .itemCon .text h4 {
-  font-size: 0.85rem;
+  font-size: 0.65rem;
   color: rgb(26, 26, 26);
   font-weight: 400;
 }
 .christmas #slider02 .listCon .christmasItem .itemCon .text p {
-  font-size: 0.75rem;
+  font-size: 0.6rem;
   color: rgba(26, 26, 26, 0.5);
-  margin-top: 0.15rem;
+  margin-top: 0.35rem;
 }
 
 .checking .listCon .lists li .musicInfo {
-  width: 10rem;
+  width: 7.8rem;
 }
 .checking .listCon .lists li .musicInfo .musicCover {
-  height: 5.6rem;
+  height: 4.6rem;
 }
 .checking .listCon .lists li .musicInfo .playInfo {
-  top: 4.4rem;
+  top: 3.5rem;
 }
 .checking .listCon .lists li .musicInfo #playButton {
   display: none;
 }
 
 .atmosphere {
-  margin-top: 1.8rem;
+  margin-top: 1.6rem;
 }
 .atmosphere .HTitle {
   width: 89%;
-  margin: 0 auto 0.8rem;
+  margin: 0 auto 0.7rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 0.9rem;
 }
 .atmosphere .lists {
-  padding: 0 1.3rem;
+  padding: 0 0.8rem;
   overflow: auto;
   display: flex;
   justify-content: space-between;
@@ -320,15 +323,15 @@ a {
   margin-right: 1rem;
 }
 .atmosphere .lists .item .wrap {
-  width: 5.3rem;
+  width: 4.3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 .atmosphere .lists .item .itemCover {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   overflow: hidden;
 }
 .atmosphere .lists .item .itemCover img {
@@ -343,48 +346,137 @@ a {
 }
 .atmosphere .lists .item .itemInfo p {
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   margin-top: 0.15rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: rgb(26, 26, 26);
 }
 .atmosphere .lists .item .itemInfo .follow {
   color: rgb(26, 26, 26);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   background-color: #ededed;
-  padding: 0.2rem 1rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 0.7rem;
   margin-top: 0.25rem;
 }
 
 .comments {
-  margin-top: 1.8rem;
+  margin-top: 1.6rem;
+  margin-bottom: 2.5rem;
 }
 .comments .HTitle {
   width: 89%;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 0.7rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 0.9rem;
 }
 .comments .input {
   width: 89%;
   text-align: center;
-  padding: 0.4rem;
+  padding: 0.3rem;
   margin: 0 auto 1.2rem;
-  color: rgb(26, 26, 26);
+  color: rgba(26, 26, 26, 0.7);
   background-color: #ededed;
   border-radius: 1.5rem;
-  font-size: 0.85rem;
+  font-size: 0.7rem;
 }
 .comments .count {
-  margin: 0.5rem 0 1.2rem 1.3rem;
+  margin: 0.5rem 0 1rem 1.1rem;
+  font-size: 0.75rem;
 }
 .comments .count span:first-child {
   font-weight: 600;
 }
-.comments .all {
-  margin: 0.5rem 0 1.5rem 1.3rem;
+.comments .count .allCount {
+  color: rgba(26, 26, 26, 0.6);
+}
+.comments .commentItem:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.comments .commentItem .ccon {
+  width: 89%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: start;
+}
+.comments .commentItem .ccon .ccover {
+  margin-right: 0.5rem;
+}
+.comments .commentItem .ccon .ccover img {
+  width: 2rem;
+  height: 2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+}
+.comments .commentItem .ccon .cinfo h3 {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgba(26, 26, 26, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: -0.3rem;
+}
+.comments .commentItem .ccon .cinfo .time {
+  font-size: 0.55rem;
+  color: rgba(26, 26, 26, 0.5);
+}
+.comments .commentItem .ccon .cinfo .ctext {
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: initial;
+  font-size: 0.75rem;
+  color: rgb(26, 26, 26);
+}
+.comments .commentItem .ccon .cinfo .subComment {
+  display: none;
+  margin-top: 0.5rem;
+  background-color: #f3f3f3;
+  padding: 0.5rem 0.5rem 0.5rem 0.7rem;
+  border-radius: 0.2rem;
+}
+.comments .commentItem .ccon .cinfo .subComment p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.68rem;
+  color: rgba(26, 26, 26, 0.7);
+}
+.comments .commentItem .ccon .cinfo .subComment p span {
   font-weight: 600;
+  color: rgb(34, 213, 156);
+}
+.comments .commentItem .ccon .cinfo .subComment p:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+.comments .commentItem .ccon .cinfo .cl {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.6rem;
+  line-height: 0.8rem;
+  color: rgba(26, 26, 26, 0.5);
+}
+.comments .commentItem .ccon .cinfo .cl svg {
+  height: 0.6rem;
+}
+.comments .commentItem .ccon .cinfo .cl .cl1,
+.comments .commentItem .ccon .cinfo .cl .cl2 {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comments .commentItem .ccon .cinfo .cl .cl2 svg:last-child {
+  margin-left: 0.1rem;
+  height: 0.8rem;
 }/*# sourceMappingURL=yujie.css.map */
