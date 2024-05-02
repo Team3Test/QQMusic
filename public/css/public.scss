@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// 顶部 固定栏
+#headerNav_1 {
+    background-color: #f8f8f8;
+    width: 100%;
+    padding: 0.4rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    ul {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    .navContent {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 75%;
+        img {
+            width: 1.7rem;
+            height: 1.7rem;
+        }
+        ul {
+            width: 90%;
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            li {
+                width: 50%;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                &:last-child {
+                    margin-left: 0.5rem;
+                    color: #808080;
+                }
+            }
+        }
+    }
+    .look {
+        padding: 0.16rem 0.4rem 0.2rem;
+        line-height: 0.75rem;
+        border: solid 1px #d8d8d8;
+        border-radius: 0.8rem;
+        a {
+            font-size: 0.65rem;
+            color: #808080;
+        }
+    }
+}

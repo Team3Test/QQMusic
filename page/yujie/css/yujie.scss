@@ -1,0 +1,429 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+// 头部背景
+.cover {
+    overflow: hidden;
+    width: 100%;
+    height: 15rem;
+    background-image: url("https://y.qq.com/music/common/upload/t_area/5913772.png?max_age=2592000");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 1.2rem;
+    h1 {
+        color: #ffffffe6;
+        font-size: 1.5rem;
+        letter-spacing: 0.05rem;
+        margin-top: 38%;
+        margin-bottom: 1.2rem;
+    }
+    a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.8);
+        background-color: #f1cc5a;
+        padding: 0.3rem 0.6rem;
+        border-radius: 2rem;
+        font-size: 0.75rem;
+    }
+}
+
+// 头部轮播
+#slider01 {
+    margin-top: -1.6rem;
+    .keen-slider__slide {
+        height: 5rem;
+        a {
+            width: 90%;
+            height: 100%;
+            margin: 0 auto;
+            display: block;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 0.5rem;
+            }
+        }
+    }
+    .number-slide1,
+    .number-slide2 {
+        background: transparent;
+    }
+}
+
+// 栏目
+.chill,
+.dopamine,
+.relax,
+.hiphop,
+.sleep,
+.checking {
+    margin-top: 1.6rem;
+    .HTitle {
+        width: 89%;
+        margin: 0 auto 0.7rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.9rem;
+    }
+    .listCon {
+        .lists {
+            padding: 0 1rem;
+            overflow: auto;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            li {
+                &:not(:last-child) {
+                    margin-right: 0.6rem;
+                }
+                .musicInfo {
+                    width: 5rem;
+                    position: relative;
+                    .musicCover {
+                        border-radius: 0.5rem;
+                        width: 100%;
+                        height: 5rem;
+                        object-fit: cover;
+                    }
+                    #playButton {
+                        position: absolute;
+                        top: 3.8rem;
+                        right: 0.2rem;
+                        width: 1rem;
+                        height: 1rem;
+                        fill: white;
+                    }
+                    .playInfo {
+                        position: absolute;
+                        top: 3.9rem;
+                        left: 0.3rem;
+                        display: inline-flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        svg {
+                            width: 0.8rem;
+                            height: 0.8rem;
+                            fill: white;
+                            margin-right: 0.15rem;
+                        }
+                        span {
+                            font-size: 0.5rem;
+                            color: white;
+                        }
+                    }
+                }
+                .title,
+                .subTitle {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .title {
+                    width: 100%;
+                    font-size: 0.65rem;
+                    color: rgba(26, 26, 26, 1);
+                    font-weight: 400;
+                }
+                .subTitle {
+                    font-size: 0.6rem;
+                    color: rgba(26, 26, 26, 0.5);
+                    margin-top: 0.1rem;
+                }
+                .subTitleMore {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: initial;
+                }
+            }
+        }
+    }
+}
+
+//christmas
+.christmas {
+    margin-top: 1.6rem;
+    .HTitle {
+        width: 89%;
+        margin: 0 auto 0.7rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.9rem;
+    }
+    #slider02 {
+        .listCon {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            .christmasItem {
+                padding-left: 1.2rem;
+                &:not(:first-child) {
+                    margin-top: 0.8rem;
+                }
+                .itemCon {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    .itemCover {
+                        width: 3rem;
+                        height: 3rem;
+                        img {
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 0.3rem;
+                        }
+                    }
+                    .text {
+                        margin-left: 0.5rem;
+                        h4,
+                        p {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        h4 {
+                            font-size: 0.65rem;
+                            color: rgba(26, 26, 26, 1);
+                            font-weight: 400;
+                        }
+                        p {
+                            font-size: 0.6rem;
+                            color: rgba(26, 26, 26, 0.5);
+                            margin-top: 0.35rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//checking
+.checking {
+    .listCon .lists li .musicInfo {
+        width: 7.8rem;
+        .musicCover {
+            height: 4.6rem;
+        }
+        .playInfo {
+            top: 3.5rem;
+        }
+        #playButton {
+            display: none;
+        }
+    }
+}
+
+//atmosphere
+.atmosphere {
+    margin-top: 1.6rem;
+    .HTitle {
+        width: 89%;
+        margin: 0 auto 0.7rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.9rem;
+    }
+    .lists {
+        padding: 0 0.8rem;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .item {
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+            .wrap {
+                width: 4.3rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .itemCover {
+                width: 3.5rem;
+                height: 3.5rem;
+                overflow: hidden;
+                img {
+                    border-radius: 100%;
+                    width: 100%;
+                }
+            }
+            .itemInfo {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                p {
+                    text-align: center;
+                    font-size: 0.7rem;
+                    margin-top: 0.15rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    color: rgba(26, 26, 26, 1);
+                }
+                .follow {
+                    color: rgba(26, 26, 26, 1);
+                    font-size: 0.7rem;
+                    background-color: #ededed;
+                    padding: 0.2rem 0.6rem;
+                    border-radius: 0.7rem;
+                    margin-top: 0.25rem;
+                }
+            }
+        }
+    }
+}
+
+//comments
+.comments {
+    margin-top: 1.6rem;
+    margin-bottom: 2.5rem;
+    .HTitle {
+        width: 89%;
+        margin: 0 auto 0.7rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.9rem;
+    }
+    .input {
+        width: 89%;
+        text-align: center;
+        padding: 0.3rem;
+        margin: 0 auto 1.2rem;
+        color: rgba(26, 26, 26, 0.7);
+        background-color: #ededed;
+        border-radius: 1.5rem;
+        font-size: 0.7rem;
+    }
+    .count {
+        margin: 0.5rem 0 1rem 1.1rem;
+        font-size: 0.75rem;
+        span {
+            &:first-child {
+                font-weight: 600;
+            }
+        }
+        .allCount {
+            color: rgba(26, 26, 26, 0.6);
+        }
+    }
+    .commentItem {
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+        .ccon {
+            width: 89%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: start;
+            .ccover {
+                margin-right: 0.5rem;
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                    object-fit: cover;
+                    border-radius: 100%;
+                }
+            }
+            .cinfo {
+                h3 {
+                    font-size: 0.75rem;
+                    font-weight: 400;
+                    color: rgba(26, 26, 26, 0.5);
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin-bottom: -0.3rem;
+                }
+                .time {
+                    font-size: 0.55rem;
+                    color: rgba(26, 26, 26, 0.5);
+                }
+                .ctext {
+                    margin-top: 0.5rem;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 5;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: initial;
+                    font-size: 0.75rem;
+                    color: rgba(26, 26, 26, 1);
+                }
+                .subComment {
+                    display: none;
+                    margin-top: 0.5rem;
+                    background-color: #f3f3f3;
+                    padding: 0.5rem 0.5rem 0.5rem 0.7rem;
+                    border-radius: 0.2rem;
+                    p {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: 0.68rem;
+                        color: rgba(26, 26, 26, 0.7);
+                        span {
+                            font-weight: 600;
+                            color: rgba(34, 213, 156, 1);
+                        }
+                        &:not(:last-child) {
+                            margin-bottom: 0.25rem;
+                        }
+                    }
+                }
+                .cl {
+                    margin-top: 0.5rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 0.6rem;
+                    line-height: 0.8rem;
+                    color: rgba(26, 26, 26, 0.5);
+                    svg {
+                        height: 0.6rem;
+                    }
+                    .cl1,
+                    .cl2 {
+                        display: inline-flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    .cl2 {
+                        svg:last-child {
+                            margin-left: 0.1rem;
+                            height: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
