@@ -64,4 +64,49 @@
 #headerNav_1 .look a {
   font-size: 0.65rem;
   color: #808080;
+}
+
+#footerNav {
+  transition: all 0.3s;
+  background-color: #f8f8f8;
+  position: fixed;
+  z-index: 9999;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 5px 11px 0.1rem rgba(168, 168, 168, 0.322);
+}
+#footerNav .con {
+  width: 90%;
+  margin: 0 auto;
+}
+#footerNav a {
+  text-decoration: none;
+}
+#footerNav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#footerNav ul .footerTab {
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+#footerNav ul .footerTab h4 {
+  font-weight: 400;
+  font-size: 0.5rem;
+  margin-top: 0.15rem;
+  color: #666;
+}
+#footerNav ul svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: rgba(67, 67, 67, 0.8705882353);
+}
+#footerNav #fillAll {
+  display: none;
 }/*# sourceMappingURL=public.css.map */
