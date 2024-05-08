@@ -468,7 +468,7 @@ a {
   color: rgba(26, 26, 26, 0.5);
 }
 .comments .commentItem .ccon .cinfo .cl svg {
-  height: 0.6rem;
+  width: 0.6rem;
 }
 .comments .commentItem .ccon .cinfo .cl .cl1,
 .comments .commentItem .ccon .cinfo .cl .cl2 {
@@ -478,5 +478,5 @@ a {
 }
 .comments .commentItem .ccon .cinfo .cl .cl2 svg:last-child {
   margin-left: 0.1rem;
-  height: 0.8rem;
+  width: 0.7rem;
 }/*# sourceMappingURL=yujie.css.map */

@@ -612,9 +612,8 @@ function showAtmosphere() {
         `;
     }
     var follows = document.querySelectorAll(".follow");
-    var isFollow = false;
-    for (let j = 0; j < follows.length; j++) {
-        follows[j].addEventListener("click", (e) => {
+    for (let j = 0, isFollow = false; j < follows.length; j++) {
+        follows[j].addEventListener("click", () => {
             if (isFollow == false) {
                 follows[j].innerHTML = "已关注";
                 follows[j].style.color = "rgba(26,26,26,.16)";

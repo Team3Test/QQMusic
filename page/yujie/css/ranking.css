@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbg {
+  text-align: center;
+  margin-top: 3rem;
+}
+.navbg img {
+  width: 9.5rem;
+  height: 9.5rem;
+  border-radius: 1rem;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 7px 13px rgba(0, 0, 0, 0.21);
+}
+.navbg h3 {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.navbg h4 {
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.navbg p {
+  margin-top: 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: grey;
+}
+.navbg a {
+  position: relative;
+  width: 9.5rem;
+  height: 2rem;
+  border-radius: 2rem;
+  display: inline-block;
+  margin-top: 0.8rem;
+  background-color: #22d59c;
+  box-shadow: 0 6px 1.6rem rgba(24, 213, 156, 0.5);
+}
+.navbg a svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.8rem;
+  height: 1.8rem;
+  fill: white;
+}
+
+.lists {
+  width: 93%;
+  margin: 0.5rem auto 0;
+}
+.lists .count {
+  color: rgba(128, 128, 128, 0.726);
+  font-size: 0.6rem;
+}
+.lists .musicList {
+  margin-top: 0.5rem;
+}
+.lists .musicList .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+.lists .musicList .item:last-child {
+  margin-bottom: 1.3rem;
+}
+.lists .musicList .item .number {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.lists .musicList .item .number .id {
+  font-size: 0.7rem;
+  color: grey;
+  margin-bottom: 0.2rem;
+}
+.lists .musicList .item .number svg {
+  width: 0.4rem;
+  height: 0.4rem;
+  fill: #f56273;
+  margin-right: 0.1rem;
+}
+.lists .musicList .item .number .grow {
+  font-size: 0.37rem;
+  color: grey;
+}
+.lists .musicList .item .number p:last-child {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lists .musicList .item .info {
+  text-align: left;
+  width: 80%;
+}
+.lists .musicList .item .info p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lists .musicList .item .info p:first-child {
+  font-size: 0.9rem;
+  color: black;
+}
+.lists .musicList .item .info p:last-child {
+  margin-top: 0.15rem;
+  font-size: 0.65rem;
+  color: rgba(93, 93, 93, 0.4);
+}
+.lists .musicList .item .download svg {
+  fill: #b3b3b3;
+}/*# sourceMappingURL=ranking.css.map */
