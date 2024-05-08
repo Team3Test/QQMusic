@@ -1,6 +1,4 @@
 var footerTab = document.querySelectorAll(".footerTab");
-footerTab[0].children[0].style.display = "none";
-footerTab[0].children[1].style.display = "block";
 
 for (let i = 0; i < footerTab.length; i++) {
     footerTab[i].addEventListener("click", function () {
