@@ -1,0 +1,402 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box !important;
+}
+body {
+    background: #f9f9f9;
+    padding-bottom: 4rem;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+// 头部粘性定位
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 990;
+    background: #fafafa;
+}
+
+// 头部标题
+.topTitle {
+    height: 2.7rem;
+    display: flex;
+    padding: 0.1rem 0.7rem 0 0.8rem;
+    img {
+        width: 1.25rem;
+        height: 1.25rem;
+        margin: 0.72rem 0.5rem;
+    }
+    .titleText {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        width: 10rem;
+        .text1 {
+            color: #000;
+        }
+        .text2 {
+            color: #808080;
+        }
+    }
+    a {
+        height: 1.25rem;
+        line-height: 1.2rem;
+        padding: 0 0.85rem;
+        margin: 0.72rem 0;
+        font-size: 0.7rem;
+        text-align: center;
+        color: #575656;
+        border: solid 1px #d8d8d8;
+        border-radius: 999px;
+    }
+}
+
+.topTable {
+    width: 100%;
+    height: 2.1rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 5px 10px -8px #aaa;
+    li {
+        height: 100%;
+        padding: 0.5rem 2rem;
+        margin: 0 auto;
+        font-size: 0.8rem;
+        color: #1a1a1a;
+        opacity: 0.4;
+    }
+}
+
+#active {
+    color: #22d59c;
+    border-bottom: 0.15rem solid #22d59c;
+}
+
+.details {
+    display: none;
+}
+.detail {
+    background: #f5f5f5;
+}
+// #detail1{
+//     display: block;
+// }
+// #detail3{
+//     display: none;
+// }
+
+// 搜索栏
+.search {
+    width: 17.1rem;
+    height: 1.7rem;
+    margin: 0.8rem auto;
+    padding: 0.25rem 7rem;
+    border-radius: 1rem;
+    background: #fff;
+    .searchContent {
+        display: flex;
+        align-items: center;
+        svg {
+            fill: #a2a2a2;
+            margin-right: 0.2rem;
+        }
+        span {
+            color: #a2a2a2;
+            text-align: center;
+            font-size: 0.6rem;
+        }
+    }
+}
+
+// 推荐栏
+// 官方歌单/达人歌单
+.recLists {
+    padding: 0 0.75rem;
+    .title {
+        height: 1.5rem;
+        margin: 0.8rem 0 0.5rem 0;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        p {
+            font-size: 0.8rem;
+            color: #000;
+            font-weight: bold;
+        }
+        a {
+            span {
+                height: 0.6rem;
+                line-height: 0.6rem;
+                font-size: 0.6rem;
+                color: #818894;
+                margin-right: -0.2rem;
+            }
+            svg {
+                // margin-left: 2px;
+                margin-top: -0.05rme;
+            }
+        }
+    }
+
+    .recListsDetail {
+        display: flex;
+        padding: 0.5rem 0;
+        display: flex;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .lists {
+            flex: 0 0 5.45rem;
+            position: relative;
+            width: 5.45rem;
+            height: 7.5rem;
+            margin-right: 0.4rem;
+            .list {
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+                p {
+                    margin-top: 0.2rem;
+                    font-size: 0.6rem;
+                    color: #1a1a1a;
+                    line-height: 0.8rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+                .listData {
+                    height: 0.85rem;
+                    line-height: 0.85rem;
+                    min-width: 0.7rem;
+                    position: absolute;
+                    bottom: 2.11rem;
+                    right: 0rem;
+                    padding: 0 0.3rem;
+                    border-radius: 0.45rem;
+                    background: rgba(0, 0, 0, 0.4);
+                    display: flex;
+                    svg {
+                        width: 0.9rem;
+                        height: 0.9rem;
+                    }
+                    span {
+                        margin-left: -0.1rem;
+                        font-size: 0.5rem;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+// 专区列表
+.zoneLists {
+    padding: 0 0.75rem;
+    .title {
+        height: 1.5rem;
+        margin: 0.8rem 0 0.5rem 0;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        p {
+            font-size: 0.8rem;
+            color: #000;
+            font-weight: bold;
+        }
+        a {
+            span {
+                height: 0.6rem;
+                line-height: 0.6rem;
+                font-size: 0.6rem;
+                color: #818894;
+                margin-right: -0.2rem;
+            }
+            svg {
+                margin-top: -0.05rme;
+            }
+        }
+    }
+
+    .zoneListsDetail {
+        display: flex;
+        padding: 0.5rem 0;
+        display: flex;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .lists {
+            flex: 0 0 11.3rem;
+            width: 11.3rem;
+            margin-right: 0.4rem;
+            .list {
+                .listImg {
+                    position: relative;
+                    img {
+                        width: 100%;
+                        border-radius: 10px;
+                    }
+                    .imgBottom {
+                        position: absolute;
+                        bottom: 0.7rem;
+                        left: 0.4rem;
+                        display: flex;
+                        img {
+                            width: 1.7rem;
+                            border-radius: 50%;
+                            margin-right: 0.3rem;
+                        }
+                        p {
+                            color: #fff;
+                            font-size: 0.8rem;
+                            line-height: 1.7rem;
+                        }
+                    }
+                }
+                .titleTxt {
+                    color: #1a1a1a;
+                    font-size: 0.8rem;
+                    margin-top: 0.2rem;
+                }
+            }
+        }
+    }
+}
+
+// 排行
+.ulRank {
+    margin-top: 0.8rem;
+    .block {
+        width: 90%;
+        background: #fff;
+        margin: 0 auto 0.6rem;
+        height: 5.3rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        .blockLeft {
+            width: 11rem;
+            font-size: 0.8rem;
+            margin: 0 12px 4px;
+            padding: 0.5rem 0;
+            h2 {
+                font-size: 0.8rem;
+            }
+            p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+            }
+            .p1-1 {
+                font-weight: bold;
+            }
+            .p1-3 {
+                color: rgba(26, 26, 26, 0.5);
+            }
+        }
+        .blockRight {
+            width: 5.3rem;
+            height: 5.3rem;
+            position: relative;
+            img {
+                width: 100%;
+            }
+            .dailyNew {
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 2;
+                height: 1.5rem;
+                padding: 0.1rem 0.2rem;
+                font-size: 0.5rem;
+                color: #fff;
+            }
+            .iconData {
+                height: 1.1rem;
+                position: absolute;
+                bottom: 0.18rem;
+                right: 0;
+                padding: 0 0.4rem 0.1rem;
+                border-radius: 1rem;
+                background: rgba(0, 0, 0, 0.4);
+                font-size: 0.5rem;
+                color: #fff;
+            }
+        }
+    }
+}
+
+//底部信息
+.bottomInfo {
+    padding: 1rem 0.75rem 1rem;
+    margin-top: 1.5rem;
+    img {
+        width: 4rem;
+        margin: 0 6.5rem;
+    }
+    p {
+        font-size: 0.8rem;
+        // font-family: '仿宋体';
+        line-height: 1.2rem;
+        color: #1a1a1a;
+        text-align: center;
+    }
+}
+
+//底部导航
+#footerNav {
+    transition: all 0.3s;
+    background-color: #f8f8f8;
+    position: fixed;
+    z-index: 9999;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 5px 11px 0.1rem rgba(168, 168, 168, 0.322);
+    .con {
+        width: 90%;
+        margin: 0 auto;
+    }
+    a {
+        text-decoration: none;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .footerTab {
+            display: inline-flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            h4 {
+                font-weight: 400;
+                font-size: 0.5rem;
+                margin-top: 0.15rem;
+                color: #666;
+            }
+        }
+        svg {
+            width: 1.2rem;
+            height: 1.2rem;
+            fill: #434343de;
+        }
+    }
+    #fillAll {
+        display: none;
+    }
+}

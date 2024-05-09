@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+#headerNav_1 {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f8f8f8;
+}
+#headerNav_1 .navContent {
+  padding: 0rem 0.8rem 0rem 0.7rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#headerNav_1 .navContent .logo {
+  display: flex;
+  align-items: center;
+}
+#headerNav_1 .navContent .logo img {
+  width: 1.75rem;
+}
+#headerNav_1 .navContent .logo ul {
+  display: flex;
+}
+#headerNav_1 .navContent .logo ul .text1 {
+  font-size: 0.75rem;
+}
+#headerNav_1 .navContent .logo ul .text2 {
+  font-size: 0.75rem;
+  color: #808080;
+}
+#headerNav_1 .navContent .look {
+  padding: 0rem 0.6rem;
+  border: solid 0.05rem #d8d8d8;
+  border-radius: 49.95rem;
+}
+#headerNav_1 .navContent .look a {
+  line-height: 1.4rem;
+  color: #575656;
+  font-size: 0.6rem;
+}
+
+.player {
+  margin-top: 2.5rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.player .player-img {
+  width: 9.5rem;
+  height: 9.5rem;
+  margin-bottom: 1.25rem;
+}
+.player .player-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.9rem;
+}
+.player .player-info {
+  margin-bottom: 0.6rem;
+  max-width: 84%;
+  text-align: center;
+}
+.player .player-info h2,
+.player .player-info .p1,
+.player .player-info .p2 {
+  width: 100%;
+  font-weight: 400;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.player .player-info h2 {
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+  color: #121212;
+}
+.player .player-info .p1 {
+  color: #121212;
+  font-size: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+.player .player-info .p2 {
+  color: #808080;
+  font-size: 0.7rem;
+}
+.player .player_btn {
+  width: 9.5rem;
+  height: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 6px 32px rgba(24, 213, 156, 0.5);
+  background-color: #22d59c;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+}
+
+.count_box {
+  margin: 0rem 0.8rem -0.25rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.count_box .count_box__txt {
+  color: #808080;
+  font-size: 0.6rem;
+}
+.count_box .count_box__txt .count_box__num {
+  margin-left: 0.25rem;
+}
+.count_box .count_box__ctrl {
+  font-size: 0.6rem;
+  color: #808080;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+.count_box .count_box__ctrl img {
+  margin-left: 0.35rem;
+}
+
+.mod_song_list .song_list__item {
+  padding: 0.5rem 0.35rem 0.5rem 0rem;
+  display: flex;
+  justify-content: space-between;
+}
+.mod_song_list .song_list__item .song_list__index {
+  width: 47px;
+  height: 21px;
+  margin-right: -0.8rem;
+  text-align: center;
+}
+.mod_song_list .song_list__item .song_list__index .song_list__index_num {
+  font-size: 0.7rem;
+  color: #808080;
+}
+.mod_song_list .song_list__item .song_list__bd {
+  width: 14.05rem;
+  margin-left: 0.8rem;
+}
+.mod_song_list .song_list__item .song_list__bd h3 {
+  color: #000;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+.mod_song_list .song_list__item .song_list__bd p {
+  color: gray;
+  font-size: 0.6rem;
+  line-height: 0.9rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.discuss {
+  margin: 0rem 0.8rem 0.7rem;
+  color: #121212;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.discussarea {
+  padding: 0rem 0.8rem;
+}
+.discussarea .title {
+  padding: 0.9rem 0rem 16px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #1a1a1a;
+}
+.discussarea .title .left span {
+  color: gray;
+}
+.discussarea .title .right span {
+  color: gray;
+}
+.discussarea ul li {
+  margin: 0rem 0rem 0.4rem;
+  padding: 0.1rem 0rem 0rem;
+  display: flex;
+  justify-content: space-between;
+}
+.discussarea ul li .touxiang {
+  margin-right: 0.4rem;
+}
+.discussarea ul li .touxiang img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.discussarea ul li .talk {
+  padding-bottom: 0.5rem;
+}
+.discussarea ul li .talk .title2 {
+  display: flex;
+  justify-content: space-between;
+}
+.discussarea ul li .talk .title2 .name span {
+  font-size: 0.75rem;
+  color: gray;
+}
+.discussarea ul li .talk .title2 .name img {
+  width: 2.3rem;
+  height: 0.7rem;
+  margin-left: 0.2rem;
+}
+.discussarea ul li .talk .title2 .zan {
+  display: flex;
+  align-items: center;
+}
+.discussarea ul li .talk .title2 .zan .num {
+  color: gray;
+  font-size: 0.75rem;
+}
+.discussarea ul li .talk .time {
+  font-size: 0.5rem;
+  color: gray;
+}
+.discussarea ul li .talk .what {
+  font-size: 0.75rem;
+  color: #1a1a1a;
+}
+.discussarea ul li .talk .repeat {
+  background-color: #efefef;
+  margin: 0.3rem 0rem 0rem;
+  padding: 0.35rem 0.55rem;
+}
+.discussarea ul li .talk .repeat .repeattext {
+  color: #1a1a1a;
+  margin-bottom: 0.15rem;
+  font-size: 0.7rem;
+}
+.discussarea ul li .talk .repeat .repeattext span {
+  color: #22d59c;
+}
+.discussarea ul li .talk .repeat a {
+  padding-bottom: 0.15rem;
+  color: gray;
+  font-size: 0.65rem;
+}/*# sourceMappingURL=music1.css.map */

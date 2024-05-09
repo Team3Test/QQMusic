@@ -132,7 +132,7 @@
             <div class="listCon">
                 <ul class="lists">
                     <li>
-                        <a href="javascript:;">
+                        <a href="../yanrong/1.html">
                             <div class="musicInfo">
                                 <img class="musicCover" src="https://y.qq.com/music/photo_new/T002R300x300M000004Nl8L01OUD70_2.jpg?max_age=2592000" />
                                 <h3 class="title">已播歌曲</h3>
@@ -143,7 +143,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="../yanrong/1.html">
                             <div class="musicInfo">
                                 <img class="musicCover" src="https://y.qq.com/music/photo_new/T002R300x300M000002rURVL27GTwJ_2.jpg?max_age=2592000" />
                                 <h3 class="title">雷达</h3>
@@ -158,7 +158,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="../yanrong/1.html">
                             <div class="musicInfo">
                                 <img class="musicCover" src="https://y.qq.com/music/photo_new/T002R300x300M000001N9LfG0wlPqb_1.jpg?max_age=2592000" />
                                 <h3 class="title">VIP歌曲</h3>
@@ -171,7 +171,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="../yanrong/1.html">
                             <div class="musicInfo">
                                 <img class="musicCover" src="https://y.qq.com/music/photo_new/T002R300x300M000003zV0ER0pAYTo_3.jpg?max_age=2592000" />
                                 <h3 class="title">当下流行</h3>
@@ -211,7 +211,7 @@
         <div id="footerNav">
             <div class="con">
                 <ul>
-                    <li class="footerTab" data-action="home">
+                    <li class="footerTab" data-action="index">
                         <svg id="fillNone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                             <path
                                 d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
@@ -256,7 +256,56 @@
             </div>
         </div>
         <script src="../../public/js/mobileAdaption.js"></script>
-        <script src="../../public/js/public.js"></script>
+        <!-- <script src="../../public/js/public.js"></script> -->
+        <script>
+            var footerTab = document.querySelectorAll(".footerTab");
+
+            for (let i = 0; i < footerTab.length; i++) {
+                footerTab[i].addEventListener("click", function () {
+                    var fillNone = this.children[0];
+                    var fillAll = this.children[1];
+                    hiddenOthers();
+                    fillNone.style.display = "none";
+                    fillAll.style.display = "block";
+                    jump(this.dataset.action);
+                });
+            }
+
+            function hiddenOthers() {
+                var fillNones = document.querySelectorAll("#fillNone");
+                var fillAlls = document.querySelectorAll("#fillAll");
+                for (k = 0; k < fillAlls.length; k++) {
+                    fillAlls[k].style.display = "none";
+                    fillNones[k].style.display = "block";
+                }
+            }
+
+            function jump(action) {
+                const urlName = window.location.pathname.split("/").slice(-1)[0].split(".")[0];
+                switch (action) {
+                    case "index":
+                        if (action !== urlName) {
+                            window.location.href = "../../index.html";
+                        }
+                        break;
+                    case "radar":
+                        if (action !== urlName) {
+                            window.location.href = "../yanrong/2.html";
+                        }
+                        break;
+                    case "community":
+                        if (action !== urlName) {
+                            window.location.href = "../hui/community.html";
+                        }
+                        break;
+                    case "user":
+                        if (action !== urlName) {
+                            window.location.href = "../yujie/user.html";
+                        }
+                        break;
+                }
+            }
+        </script>
         <script src="./js/user.js"></script>
         <script>
             var footerTab = document.querySelectorAll(".footerTab");

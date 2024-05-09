@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+
+.item0 {
+    width: 89%;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+.head {
+    margin: 1rem auto 1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.5rem 0;
+}
+.head span {
+    position: relative;
+}
+.head span::after {
+    position: absolute;
+    bottom: -0.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 0.75rem;
+    height: 0.15rem;
+    border-radius: 0.15rem;
+    background-color: #08e983;
+}
+
+.momen2 img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.momen2 {
+    display: flex;
+}
+.momen3 {
+    margin-left: 0.25rem;
+}
+.momen3 p:nth-child(1) {
+    font-size: 0.7rem;
+    color: #1a1a1a;
+}
+.momen3 p:nth-child(2) {
+    font-size: 0.55rem;
+    color: #1a1a1a99;
+    margin-top: 0.15rem;
+}
+.momen4 {
+    font-size: 0.8rem;
+    color: #1a1a1a;
+    margin-top: 0.5rem;
+}
+.momen6 {
+    color: rgba(26, 26, 26, 0.6);
+    position: relative;
+}
+.momen6 span {
+    font-size: 0.6rem;
+    position: absolute;
+    left: 1.25rem;
+    top: 0.3rem;
+}
+.momen6 svg {
+    position: absolute;
+    top: 0.25rem;
+}
+
+.momen7 {
+    color: rgba(26, 26, 26, 0.6);
+    position: relative;
+}
+.momen7 span {
+    font-size: 0.6rem;
+    position: absolute;
+    left: 5.7rem;
+    top: 0.3rem;
+}
+.momen7 svg {
+    position: absolute;
+    top: 0.25rem;
+    left: 4.5rem;
+}
+.momen8 {
+    color: rgba(26, 26, 26, 0.6);
+    position: relative;
+}
+.momen8 span {
+    font-size: 0.6rem;
+    position: absolute;
+    left: 10.6rem;
+    top: 0.3rem;
+}
+.momen8 svg {
+    position: absolute;
+    top: 0.25rem;
+    left: 9.5rem;
+}
+.moment {
+    margin-top: 1rem;
+}
+.momen5 {
+    margin-top: 0.5rem;
+}
+.momen1 {
+    margin-bottom: 3rem;
+}
+.momen9 {
+    margin-top: 0.5rem;
+}
+.momen9 img {
+    width: 6rem;
+    height: 6rem;
+    margin-left: 0.5rem;
+}
+h3 {
+    margin-top: 1rem;
+}
+.momen10 {
+    width: 2.2rem;
+    height: 0;
+    border: 2px solid rgb(97, 223, 97);
+    margin-top: 0.1rem;
+}

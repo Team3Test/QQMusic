@@ -123,7 +123,7 @@ a {
 .qqAction ul li svg {
   width: 1.5rem;
   height: 1.5rem;
-  fill: #2d2d2d;
+  fill: #5e5e5e;
 }
 .qqAction ul li h4 {
   font-size: 0.9rem;
@@ -201,7 +201,7 @@ a {
 
 .playList {
   width: 89%;
-  margin: 1rem auto 0;
+  margin: 1rem auto 2rem;
 }
 .playList ul {
   display: flex;
