@@ -30,7 +30,7 @@ function jump(action) {
             break;
         case "radar":
             if (action !== urlName) {
-                window.location.href = "../../";
+                window.location.href = "page/yanrong/2.html";
             }
             break;
         case "community":

@@ -78,16 +78,16 @@
                     <ul>
                         <li class="footerTab" data-action="index">
                             <!-- <a href=""> -->
-                                <svg id="fillNone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
-                                    />
-                                </svg>
-                                <svg id="fillAll" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
-                                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
-                                    <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
-                                </svg>
-                                <h4>首页</h4>
+                            <svg id="fillNone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
+                                />
+                            </svg>
+                            <svg id="fillAll" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
+                                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
+                            </svg>
+                            <h4>首页</h4>
                             <!-- </a> -->
                         </li>
                         <li class="footerTab" data-action="radar">
@@ -694,7 +694,56 @@
         }
     </script>
 
-    <script src="./public/js/public.js"></script>
+    <!-- <script src="./public/js/public.js"></script> -->
+    <script>
+        var footerTab = document.querySelectorAll(".footerTab");
+
+        for (let i = 0; i < footerTab.length; i++) {
+            footerTab[i].addEventListener("click", function () {
+                var fillNone = this.children[0];
+                var fillAll = this.children[1];
+                hiddenOthers();
+                fillNone.style.display = "none";
+                fillAll.style.display = "block";
+                jump(this.dataset.action);
+            });
+        }
+
+        function hiddenOthers() {
+            var fillNones = document.querySelectorAll("#fillNone");
+            var fillAlls = document.querySelectorAll("#fillAll");
+            for (k = 0; k < fillAlls.length; k++) {
+                fillAlls[k].style.display = "none";
+                fillNones[k].style.display = "block";
+            }
+        }
+
+        function jump(action) {
+            const urlName = window.location.pathname.split("/").slice(-1)[0].split(".")[0];
+            switch (action) {
+                case "index":
+                    if (action !== urlName) {
+                        window.location.href = "../../index.html";
+                    }
+                    break;
+                case "radar":
+                    if (action !== urlName) {
+                        window.location.href = "page/yanrong/2.html";
+                    }
+                    break;
+                case "community":
+                    if (action !== urlName) {
+                        window.location.href = "page/hui/community.html";
+                    }
+                    break;
+                case "user":
+                    if (action !== urlName) {
+                        window.location.href = "page/yujie/user.html";
+                    }
+                    break;
+            }
+        }
+    </script>
 
     <script>
         var footerTab = document.querySelectorAll(".footerTab");
