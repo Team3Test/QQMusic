@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>QQ音乐-搜索音乐</title>
+        <link rel="shortcut icon" href="https://y.gtimg.cn/mediastyle/mod/mobile/img/logo.svg?max_age=2592000" type="image/x-icon" />
+        <link rel="stylesheet" href="./css/search.css" />
+    </head>
+    <body>
+        <div class="searchPage">
+            <div class="sticky">
+                <div class="topTitle">
+                    <!-- 头部信息栏 -->
+                    <img src="https://y.qq.com/mediastyle/mod/mobile/img/logo.svg" alt="" />
+                    <div class="titleText">
+                        <p class="text1">QQ音乐</p>
+                        <p class="text2">打开APP收藏下载</p>
+                    </div>
+                    <a href="downloadPage.html">下载APP</a>
+                </div>
+            </div>
+            <div class="search">
+                <!-- 搜索栏 -->
+                <div class="inp">
+                    <input type="text" id="txt" placeholder="搜索" />
+                    <svg t="1714462807764" class="icon svg1" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1213" width="22" height="22">
+                        <path
+                            d="M854.87104 849.87904a30.01856 30.01856 0 0 1-42.43968 0l-140.12416-140.18048c-54.27712 46.8224-124.8256 75.33056-202.10688 75.33056-171.136 0-309.85216-138.71616-309.85216-309.85216 0-171.11552 138.71104-309.85216 309.85216-309.85216 171.15648 0 309.85216 138.73664 309.85216 309.85216 0 72.18688-24.9088 138.49088-66.304 191.14496l141.14816 141.15328a30.07488 30.07488 0 0 1-0.0256 42.40384zM470.1952 225.29536c-137.99424 0-249.87648 111.88736-249.87648 249.8816 0 138.01472 111.88736 249.8816 249.87648 249.8816 137.99936 0 249.87648-111.872 249.87648-249.8816 0.00512-137.99424-111.87712-249.8816-249.87648-249.8816z"
+                            p-id="1214"
+                        ></path>
+                    </svg>
+                    <svg onclick="getCancal()" t="1715068272650" class="icon svg2" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1379" width="22" height="22">
+                        <path d="M704.28672 309.20704l28.95872 28.9792L334.6432 736.78848l-28.95872-28.9792z" fill="#231815" p-id="1380"></path>
+                        <path d="M341.03296 315.5968l398.60224 398.60224-28.95872 28.95872-398.60224-398.60224z" p-id="1381"></path>
+                    </svg>
+                </div>
+            </div>
+            <audio src=""></audio>
+            <ul></ul>
+        </div>
+    </body>
+    <script src="../../public/js/mobileAdaption.js"></script>
+    <script>
+        var txt = document.querySelector("#txt");
+        var ul = document.querySelector("ul");
+        let timerId = null;
+        const flok = document.querySelector(".svg2");
+        txt.addEventListener("input", function () {
+            //监听input输入框的value值
+            if (timerId) {
+                clearTimeout(timerId);
+            }
+            //添加定时器防抖
+            timerId = setTimeout(() => {
+                // console.log(event.target.value)
+                let t = txt.value;
+                console.log(t);
+                fetch("https://zj.v.api.aa1.cn/api/qqmusic/demo.php?type=1&q=" + t + "&p=1&n=5")
+                    .then((res) => res.json())
+                    .then((res1) => {
+                        ul.innerHTML = "";
+                        console.log(res1.list);
+                        for (var i = 0; i < res1.list.length; i++) {
+                            ul.innerHTML += `
+                        <li onclick="play('${res1.list[i].url}')">
+                            <span class='listName'>${res1.list[i].name}</span>
+                            <span class='listSinger'>${res1.list[i].singer}</span>
+                        </li>
+                    `;
+                        }
+                    });
+                t == "" ? (flok.style.display = "none") : (flok.style.display = "block");
+                // 清除定时器
+                timerId = null;
+            }, 300);
+        });
+
+        txt.onchange = () => {
+            //input输入框文本替换
+            console.log(event.target.value);
+        };
+
+        // 播放音乐
+        var audio = document.querySelector("audio");
+        function play(url) {
+            audio.setAttribute("src", url);
+            audio.play();
+        }
+
+        //取消搜索
+        // const
+    </script>
+</html>

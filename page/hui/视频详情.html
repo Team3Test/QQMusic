@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/视频详情.css" />
+        <title>QQ音乐-播放-《1 Am. Study Session》</title>
+        <link rel="shortcut icon" href="https://y.gtimg.cn/mediastyle/mod/mobile/img/logo.svg?max_age=2592000" type="image/x-icon" />
+    </head>
+    <body>
+        <video src="./mv/7939f41d1fa130f0aa4658e6f3cd03cc.mp4"></video>
+        <img src="./image/暂停.png" alt="" onclick="pl()" class="image" />
+        <img src="https://y.gtimg.cn/music/photo_new/T001R150x150M0000003z13h1mrxyF_7.jpg?max_age=2592000" alt="" class="image1" />
+        <span>Lofi Girl</span>
+        <p>《1 Am. Study Session》Lofi Girl首张合辑MV</p>
+    </body>
+
+    <script src="./js/视频详情.js"></script>
+    <!-- <script>
+    const video=document.querySelector('video')
+    const image=document.querySelector('.image')
+    let bol=true
+    const pl=()=>{
+        if(bol){
+        image.setAttribute('src','./image/播放.png')
+        video.play();
+    }else{
+        image.setAttribute('src','./image/暂停.png')
+        video.pause();
+    }
+    bol=!bol
+}
+
+
+
+
+      // 移动端自适应代码
+      (function (doc, win) {
+        var docEL = document.documentElement,
+            resizeEvt = "orientationchange" in window ? "orientationchange" : "resize",
+            recalc = function () {
+            // 获取当前设备的宽度
+            var clientWidth = docEL.clientWidth;
+            if (!clientWidth) return;
+            docEL.style.fontSize = (clientWidth / 750) * 40 + "px";
+            };
+        if (!doc.addEventListener) return;
+        //添加窗口变动监听
+        win.addEventListener(resizeEvt, recalc, false);
+        //dom加载的时候执行一次
+        doc.addEventListener("DOMContentLoaded", recalc, false);
+    })(document, window);
+</script> -->
+</html>

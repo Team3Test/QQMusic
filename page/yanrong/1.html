@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./font/iconfont.css" />
+        <link rel="shortcut icon" href="https://y.gtimg.cn/mediastyle/mod/mobile/img/logo.svg?max_age=2592000" type="image/x-icon" />
+        <title>QQ音乐-歌单</title>
+        <link rel="stylesheet" href="../../public/css/public.css" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .box {
+                background-color: #f8f8f8;
+            }
+
+            .title1 {
+                display: flex;
+                width: 18.75rem;
+                height: 2.5rem;
+                padding: 0px 0.7rem 0 0.8rem;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .title-left p {
+                font-size: 0.75rem;
+                color: #000;
+                margin-left: 0.25rem;
+            }
+
+            .title-left div {
+                font-size: 0.75rem;
+                color: #808080;
+            }
+
+            .title-left {
+                display: flex;
+                align-items: center;
+            }
+
+            .title-left img {
+                width: 1.75rem;
+                height: 1.75rem;
+            }
+
+            .title-right {
+                font-size: 0.6rem;
+                color: #575656;
+                padding: 0.25rem 0.6rem;
+                border: 0.05rem solid #d3cdcd;
+                border-radius: 0.75rem;
+            }
+
+            .picture img {
+                width: 100%;
+                height: 11.85rem;
+                object-fit: cover;
+            }
+
+            .introduce {
+                border-radius: 0.5rem;
+                z-index: 9;
+                width: 89%;
+                height: 12rem;
+                background-color: white;
+                padding: 0.5rem 0;
+                margin: -1.2rem auto 0;
+                box-shadow: 2px 0 4px rgba(241, 233, 233, 0.5), -2px 0 4px rgba(241, 233, 233, 0.5), 0 2px 4px rgba(241, 233, 233, 0.5), 0 -2px 4px rgba(241, 233, 233, 0.5);
+            }
+
+            .introduce-top {
+                padding: 0 0.8rem;
+                height: 1rem;
+                margin: 1rem 0rem 0.4rem;
+                line-height: 1rem;
+                display: flex;
+                align-items: center;
+            }
+
+            .introduce-top img {
+                width: 1rem;
+                height: 1rem;
+                margin: 0 0.5rem 0 0;
+            }
+
+            .introduce-top span {
+                font-size: 0.7rem;
+                color: #777;
+            }
+
+            .introduce-bottom {
+                padding: 0 0.8rem;
+                color: #777;
+                font-size: 0.6rem;
+                text-align: justify;
+                line-height: 1rem;
+            }
+
+            .other {
+                position: relative;
+                border-top: 0.05rem solid rgb(235 233 233 / 70%);
+                margin-top: 0.5rem;
+                /* width: 19.4rem; */
+                height: 2.75rem;
+                background-color: aqua;
+                padding: 0 0.6rem;
+                /* margin-left: -0.8rem; */
+                background-color: white;
+                border-radius: 0 0 0.5rem 0.5rem;
+            }
+
+            .other-left span {
+                align-content: center;
+                display: block;
+                align-items: flex-end;
+                position: absolute;
+                top: 1.28rem;
+                left: 3rem;
+                color: #221d1d;
+                font-size: 0.6rem;
+
+                line-height: 100%;
+            }
+
+            .other-right i {
+                position: absolute;
+                font-size: 1.3rem;
+                top: 0.5rem;
+                right: 2rem;
+            }
+
+            .other-right span {
+                font-size: 0.6rem;
+                position: absolute;
+                top: 1.7rem;
+                right: 0.6rem;
+            }
+
+            .icon-zanting {
+                position: absolute;
+                top: 0.8rem;
+                left: 1.3rem;
+                color: green;
+                font-size: 1.5rem;
+            }
+
+            .icon-bofang {
+                position: absolute;
+                top: 0.8rem;
+                left: 1.3rem;
+                color: green;
+                font-size: 1.5rem;
+            }
+            .content {
+                margin-top: 1.3rem;
+            }
+
+            .content1 {
+                width: 89%;
+                height: 2.1rem;
+                /* padding: 0.5rem 0.8rem; */
+                /* background-color: cornflowerblue; */
+                margin: 1rem auto 0;
+                /* margin-left: 1.5rem; */
+                padding: 0 0.5rem;
+            }
+
+            .title {
+                color: #000;
+                font-size: 0.8rem;
+                cursor: pointer;
+            }
+
+            .artist {
+                color: #777;
+                font-size: 0.6rem;
+                margin-top: 0.25rem;
+            }
+
+            .song {
+                /* margin-top: 0; */
+            }
+
+            .song img {
+                width: auto;
+                height: 0.6rem;
+            }
+
+            .content1-song {
+                display: flex;
+            }
+
+            .vip {
+                color: #777;
+                font-size: 0.6rem;
+            }
+
+            .bottom {
+                position: relative;
+                width: 100%;
+                /* height: 2.75rem; */
+                padding: 3.5rem 0 2rem;
+            }
+
+            .bottom img {
+                width: 2.5rem;
+                height: 2.5rem;
+                margin-left: 50%;
+                transform: translate(-50%);
+                margin-top: 0.5rem;
+            }
+
+            .bottom p {
+                color: #3e3e3ed9;
+                font-size: 0.7rem;
+                margin: 0.1rem 0 0;
+                text-align: center;
+            }
+
+            .load {
+                /* text-align: center; */
+                font-family: 宋体;
+                position: absolute;
+                bottom: 7.5rem;
+                left: 50%;
+                transform: translate(-50%);
+                color: #808080;
+                font-size: 0.8rem;
+                opacity: 0.5;
+            }
+
+            .fixed {
+                position: fixed;
+                top: -1rem;
+                left: 0;
+                width: 100%;
+                z-index: 999999;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 顶部 固定栏-->
+        <div id="headerNav_1">
+            <div class="navContent">
+                <div class="logo">
+                    <img src="https://y.qq.com/music/common/upload/t_shared_ad/2455021.png?max_age=2592000" alt="" />
+                    <ul>
+                        <li>更多精彩音乐</li>
+                        <li>尽在QQ音乐</li>
+                    </ul>
+                </div>
+                <div class="look">
+                    <a href="">打开APP</a>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <!-- <div class="title1">
+                <div class="title-left">
+                    <img src="./img/QQ音乐图标.png" alt="" />
+                    <p>更多好听歌单</p>
+                    <div>尽在QQ音乐</div>
+                </div>
+                <div class="title-right">
+                    <a href="./jump.html">
+                        <span>打开QQ音乐</span>
+                    </a>
+                </div>
+            </div> -->
+            <div class="picture">
+                <img src="./img/singer.webp" alt="" />
+            </div>
+            <div class="introduce">
+                <div class="introduce-top">
+                    <img src="./img/QQ音乐图标.png" alt="" />
+                    <span>QQ音乐官方歌单</span>
+                </div>
+                <div class="introduce-bottom">
+                    <p>
+                        陈奕迅，曾连续十三年获得十大中文金曲“最优秀流行男歌手大奖”的男歌手，是粉丝心目中的“K歌之王“。无论是以前还是现在，陈奕迅好像一直追求在音乐里诉说自己真实纯粹的故事和情感。这张歌单收录了陈奕迅的部分音乐作品。有哪些是你认为“最·陈奕迅”却没有出现在这里的歌曲，请在评论与我们分享～
+                    </p>
+                </div>
+                <div class="other" id="nav">
+                    <div class="other-left">
+                        <i class="iconfont icon-zanting" id="stop-click"></i>
+                        <span id="playAll">播放全部</span>
+                    </div>
+                    <div class="other-right">
+                        <a href="../yujie/user.html"> <i class="iconfont icon-shoucang"></i></a>
+                        <span>去QQ音乐收藏</span>
+                    </div>
+                    <audio src="./mp3/坠.mp3" controls style="display: none" id="audioPlayer"></audio>
+                </div>
+            </div>
+            <div class="content" id="playlist">
+                <div class="content1" onclick="playSong(this)">
+                    <p class="title">陈奕迅十大金曲深度解析</p>
+                    <div class="artist">Cube魔方·陈奕迅-末代歌王</div>
+                </div>
+                <div class="content1 song" onclick="playSong(this)">
+                    <p class="title">歌颂</p>
+                    <div class="artist">陈奕迅·Solidays(2 CD)</div>
+                </div>
+                <div class="content1 song" onclick="playSong(this)">
+                    <p class="title">致明日的舞</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·致明日的舞</span>
+                </div>
+                <div class="content1 song" onclick="playSong(this)">
+                    <p class="title">斯德尔摩情人</p>
+                    <div class="artist">陈奕迅·The Key</div>
+                </div>
+                <div class="content1 song" onclick="playSong(this)">
+                    <p class="title">打回原形</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·Solidays(2 CD)</span>
+                </div>
+                <div class="content1 song" onclick="playSong(this)">
+                    <p class="title">十面埋伏</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·Live For Today</span>
+                </div>
+                <div class="content1 song" onclick="playSong(this)">
+                    <p class="title">防不胜防</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·The Line-Up</span>
+                </div>
+                <div class="content1 song" onclick="playSong(this)">
+                    <p class="title">内疚</p>
+                    <div class="artist">陈奕迅·？</div>
+                </div>
+                <div class="content1 song" onclick="playSong(this)">
+                    <p class="title">Shall We Talk</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·Shall We Dance？Shall We Talk！</span>
+                </div>
+                <div class="content1 song" onclick="playSong(this)">
+                    <p class="title">白色球鞋</p>
+                    <div class="artist">陈奕迅·认了吧</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">Fight as ONE</p>
+                    <div class="artist">陈奕迅/蔡依林·Fight as ONE</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">于心有愧</p>
+                    <div class="artist">陈奕迅·H3</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">可一可再</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅/eason and the duo band·L.O.V.E.</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">相信你的人</p>
+                    <div class="title">陈奕迅·相信你的人</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">我们</p>
+                    <div class="artist">陈奕迅·我们（《后来的我们》电影主题曲）</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">十年</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·黑白灰</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">好久不见</p>
+                    <div class="artist">陈奕迅·认了吧</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">不要说话</p>
+                    <div class="artist">陈奕迅·不想放手</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">岁月如歌</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·Live For Today</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">最佳损友</p>
+                    <div class="artist">陈奕迅·Life Continues</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">热带雨林</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·The Eason Ride</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p classs="title">粤语残片</p>
+                    <div class="artist">陈奕迅·What's Going On...?(Remastered 2019)</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">陀飞轮</p>
+                    <div class="artist">陈奕迅·Time Files</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">孤独患者</p>
+                    <div class="artist">陈奕迅·？</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">圣诞结</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·七</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">明年今日</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·The Line-Up</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">无条件</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·准备中</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">K歌之王（粤语）</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·打得火热</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">白玫瑰</p>
+                    <div class="artist">陈奕迅·What's Going On...?(Remastered 2019)</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">富士山下</p>
+                    <div class="artist">陈奕迅·What's Going On...?(Remastered 2019)</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">单车</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·Shall We Dance？Shall We Talk！</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">沙龙</p>
+                    <div class="artist">陈奕迅·H3M</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">渐渐</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅/eason and the duo band· L.O.V.E.</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">与你常在</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅/eason and the duo band· L.O.V.E.</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">我们万岁</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅/eason and the duo band· L.O.V.E.</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">无人之境</p>
+                    <div class="artist">陈奕迅·Time Files</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">一丝不挂</p>
+                    <div class="artist">陈奕迅·Time Files</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">浮夸</p>
+                    <div class="artist">陈奕迅·U87</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">葡萄成熟时</p>
+                    <div class="artist">陈奕迅·U87</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">夕阳无限好</p>
+                    <div class="artist">陈奕迅·U87</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">放</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·C'mon in~</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">谁来剪月光</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·C'mon in~</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">人来人往</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·The Line-Up</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">今天只做一件事</p>
+                    <div class="artist">陈奕迅·H3M</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">四级</p>
+                    <div class="artist">陈奕迅·四季</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">红玫瑰</p>
+                    <div class="artist">陈奕迅·认了吧</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">陪你度过漫长岁月</p>
+                    <div class="artist">陈奕迅·陪你度过漫长岁月（"陪安东尼度过漫长岁月"电影主题曲）</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">淘汰</p>
+                    <div class="artist">陈奕迅·认了吧</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">你的背包</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·Special Thanks To...</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">K 歌之王（国语）</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·反正是我</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">爱情转移</p>
+                    <div class="artist">陈奕迅·爱情呼叫转移</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">可以了</p>
+                    <div class="artist">陈奕迅·rice&shine</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">对不起 谢谢</p>
+                    <div class="artist">陈奕迅·怎么样</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">看穿</p>
+                    <div class="artist">陈奕迅·？</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">稳稳地幸福</p>
+                    <div class="artist">陈奕迅·稳稳地幸福</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">在这个世界相遇</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·在这个世界相遇</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">全世界失眠</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·反正是我</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">阴天快乐</p>
+                    <div class="artist">陈奕迅·rice&shine</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">I Do</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·I Do</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">让我留在你身边</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·让我留在你身边</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">Muffin Man</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·？</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">因为爱情</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·Stranger Under My Skin</span>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">恐龙进化论</p>
+                    <div class="artist">陈奕迅·恐龙进化论</div>
+                </div>
+                <div class="content1 song hidden" onclick="playSong(this)">
+                    <p class="title">黑洞</p>
+                    <img src="./img/vip.png" alt="" />
+                    <span class="artist vip">陈奕迅·准备中</span>
+                </div>
+            </div>
+            <div class="bottom">
+                <img src="./img/QQ音乐图标.png" alt="" />
+                <p>QQ音乐</p>
+                <div class="load" id="more">点击加载更多歌曲</div>
+            </div>
+        </div>
+    </body>
+    <script>
+        //--->当页面滚动时，且滚动到导航栏的位置时，才让导航栏固定在顶部
+
+        // 获取导航栏元素
+        const navbar = document.getElementById("nav");
+        // 获取导航栏在文档中的初始位置
+        const navbarOffsetTop = navbar.offsetTop;
+        // 监听页面滚动事件
+        window.addEventListener("scroll", function () {
+            // 获取页面滚动的垂直距离
+            const scrollY = window.scrollY || window.pageYOffset; //获取当前窗口的垂直滚动位置，前者适用于高版本浏览器，后者适用于低版本浏览器；
+
+            // 根据滚动距离添加或移除固定导航栏的样式类
+            if (scrollY > navbarOffsetTop) {
+                navbar.classList.add("fixed");
+                const introduce = document.querySelector(".introduce");
+                introduce.style.height = "auto";
+            } else {
+                navbar.classList.remove("fixed");
+            }
+        });
+        //--->实现点击暂停图片，图片更换成播放图片
+        // 获取图标元素
+        const audioPlayer = document.getElementById("audioPlayer");
+        const musicIcon = document.getElementById("stop-click");
+
+        // 设置初始状态为播放
+        let isPlaying = true;
+
+        // 点击图标时的事件处理函数
+        musicIcon.addEventListener("click", function () {
+            // 切换播放状态
+            isPlaying = !isPlaying;
+
+            // 根据播放状态切换图标
+            if (isPlaying) {
+                audioPlayer.play();
+                musicIcon.classList.remove("icon-zanting");
+                musicIcon.classList.add("icon-bofang");
+                // 这里可以添加播放音乐的代码
+            } else {
+                audioPlayer.pause();
+                musicIcon.classList.remove("icon-bofang");
+                musicIcon.classList.add("icon-zanting");
+                // 这里可以添加暂停播放音乐的代码
+            }
+        });
+        //---每点一次歌曲，播放全部替换成该内容；
+        function playSong(content1) {
+            // 获取点击的歌曲信息
+            var title = content1.querySelector(".title").textContent;
+            var artist = content1.querySelector(".artist").textContent;
+
+            // 更新播放控制文字
+            var playAll = document.getElementById("playAll");
+            playAll.innerHTML = title;
+        }
+        //--->实现点击加载更多，分次显示余下歌单内容
+        var more = document.getElementById("more");
+        more.addEventListener("click", function () {
+            const hiddenSongs = document.querySelectorAll(".hidden");
+
+            // 显示下一个隐藏的歌单
+            hiddenSongs.forEach(function (song, index) {
+                if (index < 25) {
+                    // 一次性显示25首歌曲
+                    song.classList.remove("hidden");
+                }
+            });
+
+            // 如果没有更多隐藏的歌单，隐藏加载更多按钮
+            if (document.querySelectorAll(".hidden").length === 0) {
+                this.style.display = "none";
+            }
+        });
+    </script>
+
+    <script src="../../public/js/mobileAdaption.js"></script>
+</html>

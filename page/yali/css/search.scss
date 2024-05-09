@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box !important;
+}
+body{ background: #f9f9f9;padding-bottom: 4rem;}
+a{ text-decoration: none;}
+ul{ list-style: none;}
+
+// 头部粘性定位
+.sticky{
+    position: sticky;
+    top: 0;
+    z-index: 990;
+    background: #fafafa;
+}
+
+// 头部标题
+.topTitle{
+    height: 2.7rem;
+    display: flex;
+    padding: 0.1rem .7rem 0 .8rem;
+    box-shadow: 0 3px 12px -8px #aaa;
+    img{
+        width: 1.25rem;
+        height: 1.25rem;
+        margin: .72rem 0.5rem;
+    }
+    .titleText{
+        font-size: .8rem;
+        line-height: 1.5;
+        width: 10rem;
+        .text1{
+            color: #000;
+        }
+        .text2{
+            color: #808080;
+        }
+    }
+    a{
+        height: 1.25rem;
+        line-height: 1.2rem;
+        padding: 0 .85rem;
+        margin: .72rem 0;
+        font-size: .7rem;
+        text-align: center;
+        color: #575656;
+        border: solid 1px #d8d8d8;
+        border-radius: 999px;
+    }
+}
+
+// 搜索栏
+.search{
+    width: 17rem;
+    // height: 2rem;
+    margin: 0.8rem auto;
+    .inp{
+        position: relative;
+        input{
+            height: 1.8rem;
+            width: 17rem;
+            padding: .4rem 1.7rem;
+            background: #fff;
+            border-radius: 1rem;
+            outline: none;
+            border: none;
+            /* margin: 0 0.3rem; */
+            // padding: 0.1rem 1.4rem;
+        }
+        .svg1{
+            fill: #a2a2a2;
+            position: absolute;
+            top: 0.4rem;
+            left: 0.4rem;
+        }
+        .svg2{
+            fill: #a2a2a2;
+            position: absolute;
+            top: 0.4rem;
+            right: 0.4rem;
+            display: none;
+        }
+    }
+}
+
+ul{
+    width: 100%;
+    padding: 0.2rem 1.1rem;
+    li{
+        display: flex;
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 0.3rem;
+    }
+}
+span{
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.listName{
+    width: 11rem;
+}
+.listSinger{
+    width: 11rem;
+}
+
+
+
+

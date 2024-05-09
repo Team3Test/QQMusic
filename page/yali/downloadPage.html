@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>QQ音乐-下载QQ音乐</title>
+        <link rel="shortcut icon" href="https://y.gtimg.cn/mediastyle/mod/mobile/img/logo.svg?max_age=2592000" type="image/x-icon" />
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box !important;
+            }
+            .downloadPage {
+                width: 100vw;
+                height: 100vh;
+                position: relative;
+                background: url("https://y.gtimg.cn/mediastyle/mobile/project_v9/img/download_bg.jpg");
+            }
+            .download {
+                width: 14.1rem;
+                height: 23.4rem;
+                position: absolute;
+                top: 3rem;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 3%;
+                overflow: hidden;
+                background: #fff;
+                padding-bottom: 1rem;
+            }
+            p {
+                font-size: 0.8rem;
+                color: #000;
+                text-align: center;
+                font-weight: 400;
+                line-height: 2;
+            }
+            .btnDownload {
+                background: #22d59c;
+                width: 14.1rem;
+                height: 2rem;
+                margin: 0 auto;
+                position: absolute;
+                top: 28rem;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 2rem;
+                display: flex;
+            }
+            .logo {
+                margin: 0.5rem 0.4rem 0.5rem 3.5rem;
+            }
+            span {
+                font-size: 0.8rem;
+                color: #fff;
+                line-height: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="downloadPage">
+            <div class="download">
+                <img class="downloadImg" width="100%" src="https://y.gtimg.cn/mediastyle/mobile/project_v9/img/download_cover.jpg?max_age=2592000" alt="" />
+                <p style="margin-top: 0.4rem">全新QQ音乐</p>
+                <p>最全正版曲库</p>
+            </div>
+            <a class="btnDownload">
+                <img class="logo" width=".9rem" src="https://y.gtimg.cn/mediastyle/mod/mobile/img/logo.svg?max_age=2592000" alt="" />
+                <span>立即下载QQ音乐</span>
+            </a>
+        </div>
+    </body>
+    <script>
+        // 移动端自适应代码
+        (function (doc, win) {
+            var docEL = document.documentElement,
+                resizeEvt = "orientationchange" in window ? "orientationchange" : "resize",
+                recalc = function () {
+                    // 获取当前设备的宽度
+                    var clientWidth = docEL.clientWidth;
+                    if (!clientWidth) return;
+                    docEL.style.fontSize = (clientWidth / 750) * 40 + "px";
+                };
+            if (!doc.addEventListener) return;
+            //添加窗口变动监听
+            win.addEventListener(resizeEvt, recalc, false);
+            //dom加载的时候执行一次
+            doc.addEventListener("DOMContentLoaded", recalc, false);
+        })(document, window);
+    </script>
+</html>

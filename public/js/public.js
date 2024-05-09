@@ -21,20 +21,27 @@ function hiddenOthers() {
 }
 
 function jump(action) {
+    const urlName = window.location.pathname.split("/").slice(-1)[0].split(".")[0];
     switch (action) {
-        case "home":
-            console.log(action);
-            // window.location.href = "../page/yujie/yujie.html";
+        case "index":
+            if (action !== urlName) {
+                window.location.href = "../../index.html";
+            }
             break;
         case "radar":
-            console.log(action);
-            // window.location.href = "ranking.html";
+            if (action !== urlName) {
+                window.location.href = "../../";
+            }
             break;
         case "community":
-            console.log(action);
+            if (action !== urlName) {
+                window.location.href = "page/hui/community.html";
+            }
             break;
         case "user":
-            console.log(action);
+            if (action !== urlName) {
+                window.location.href = "page/yujie/user.html";
+            }
             break;
     }
 }

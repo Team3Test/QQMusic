@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+.top{
+    position: relative;
+    overflow: hidden;
+    height: 14.1rem;
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+}
+.top0{
+    width: 100%;
+    height: 17rem;
+}
+.top::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 14.1rem;
+    background-image: url(https://y.qq.com/mediastyle/mobile/app/share/img/user_top_mask.png?max_age=2592000&v=afb240753b1f44385b93c7f3767b1d56);
+    background-size: cover;
+    background-position: center center;
+}
+.top1{
+    position: absolute;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 1.25rem;
+    top: 7.5rem;
+    left: 1rem;
+    z-index: 2;
+}
+.top2{
+    position: absolute;
+    color: rgba(255, 255, 255, .8);
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 0.6rem;
+    top: 9.5rem;
+    left: 1rem;
+    z-index: 2;
+}
+.top3{
+    position: absolute;
+    color: rgba(255, 255, 255, .8);
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 0.6rem;
+    top: 9.5rem;
+    left: 4rem;
+    z-index: 2;
+}
+.top4{
+    position: absolute;
+    line-height: 1.4;
+    top: 11rem;
+    left: 1rem;
+    z-index: 2;
+    width: .75rem;
+}
+.top5{
+    position: absolute;
+    color: rgba(255, 255, 255, .8);
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 0.6rem;
+    top: 11rem;
+    left: 2rem;
+    z-index: 2;
+}
+.icon1{
+    position: absolute;
+    top: 12rem;
+    left: 1rem;
+    z-index: 2;
+    color: #fff;
+}
+.top6{
+    position: absolute;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 0.6rem;
+    top: 12rem;
+    left: 2rem;
+    z-index: 2;
+}
+.title{
+    color: rgba(26, 26, 26, .5);
+    font-weight: 400;
+}
+.title0{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.item0{
+    margin-left: .5rem;
+}
+.a{
+    font-size: .75rem;
+    color: #000;
+}
+.b{
+    font-size: .6rem;
+    color: #00000066;
+    margin-top: .25rem;
+}
+.item{
+    position: relative;
+    margin-bottom: 0.85rem;
+    margin-top: 1rem;
+}
+.icon2{
+    position: absolute;
+    right: 1.15rem;
+    top: 0.85rem;
+}
+.mui1{
+    display: flex;
+    margin-top: 1rem;
+}
+.mui1 img{
+    width: 3rem;
+    border-radius: 10%;
+}
+.mui{
+    margin-left: 1rem;
+    width: 9.95rem;
+}
+.mui p:nth-child(1){
+line-height: .7rem;
+font-size: .7rem;
+color: #000;
+font-weight: 400;
+margin-top: .5rem;
+}
+.mui p:nth-child(2){
+line-height: .6rem;
+font-size: .6rem;
+color: #00000066;
+font-weight: 400;
+margin-top: .5rem;
+}
+.mui2{
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+}
+.mui3{
+
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+}
+
+.item0{
+    display: none;
+}
+.list{
+    position: relative;
+    margin-left: .5rem;
+    margin-top: 1.5rem;
+}
+.list img{
+    width: 8.4rem;
+    height: 4.7rem;
+    border-radius: 5%;
+}
+.list span{
+    position: absolute;
+    font-size: .7rem;
+    color: #000;
+    left: .9rem;
+}
+.list svg{
+    position: absolute;
+    top:5rem;
+}
+#item1{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.3rem;
+}
+.momen2 img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.momen2{
+    display: flex;
+}
+.momen3{
+    margin-left: .25rem;
+}
+.momen3 p:nth-child(1){
+    font-size: .7rem;
+    color: #1a1a1a;
+}
+.momen3 p:nth-child(2){
+    font-size: .55rem;
+    color: #1a1a1a99;
+}
+.momen4{
+    font-size: .8rem;
+    color: #1a1a1a;
+    margin-top: .5rem;
+}
+.momen6{
+    color: rgba(26, 26, 26, .6);
+    position: relative;
+}
+.momen6 span{
+    font-size: 0.6rem;
+    position: absolute;
+    left: 1.25rem;
+    top: .3rem;
+}
+.momen6 svg{
+    position: absolute;
+    top: .25rem;
+}
+
+.momen7{
+    color: rgba(26, 26, 26, .6);
+    position: relative;
+}
+.momen7 span{
+    font-size: 0.6rem;
+    position: absolute;
+    left: 5.7rem;
+    top: .3rem;
+}
+.momen7 svg{
+    position: absolute;
+    top: .25rem;
+    left: 4.5rem;
+}
+.momen8{
+    color: rgba(26, 26, 26, .6);
+    position: relative;
+}
+.momen8 span{
+    font-size: 0.6rem;
+    position: absolute;
+    left: 9.6rem;
+    top: .4rem;
+}
+.momen8 svg{
+    position: absolute;
+    top: .25rem;
+    left: 8.5rem;
+}
+.moment{
+    margin-top: 1rem;
+}
+.momen5{
+    margin-top: .5rem;
+}
+.momen1{
+    margin-bottom: 3rem;
+}
+.mod2{
+    font-size: .8rem;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+.mo{
+    width: .75rem;
+    height: .75rem;
+    margin-top: .5rem;
+}
+.mod1 span{
+    color: #1a1a1a80;
+    font-size: .7rem;
+    margin-top: .5rem;
+}
+.mod3{
+    font-size: .8rem;
+    font-weight: 700;
+    margin-top: .5rem;
+}
+.mod1 p{
+    color: #1a1a1a80;
+    font-size: .7rem;
+    line-height: 1.2rem;
+    margin-top: .5rem;
+}
+.mod4{
+    font-size: .8rem;
+    font-weight: 700;
+    margin-top: .5rem;
+}
+.mod5{
+    display: flex;
+}
+.mod6{
+    margin-top: 0.9rem;
+    margin-left: .5rem;
+}
+.mod5 img{
+    width: 3rem;
+    height: 3rem;
+}
+.mod6 h3{
+    color: #000;
+    font-size: .7rem;
+}
+.mod6 p{
+    color: #00000066;
+    font-size: .6rem;
+    margin-top: 0.2rem;
+}
+.mod7{
+    width: 3.4rem;
+    height: 1.25rem;
+    border: 1px solid #000;
+    border-radius: 2.5rem;
+    margin-left: 1.75rem;
+    margin-top: 1.15rem;
+}
+.mod7 p{
+    color: #1a1a1a;
+    font-size: .6rem;
+    line-height: 0.25rem;
+    text-align: center;
+}
+.mod8{
+    font-size: .8rem;
+    font-weight: 700;
+    margin-top: .5rem;
+}
+
+
+
+.mu1{
+    display: flex;
+    margin-top: 1rem;
+}
+.mu1 img{
+    width: 3rem;
+    border-radius: 10%;
+}
+.mu{
+    margin-left: 1rem;
+    width: 9.95rem;
+}
+.mu p:nth-child(1){
+line-height: .7rem;
+font-size: .7rem;
+color: #000;
+font-weight: 400;
+margin-top: .5rem;
+}
+.mu p:nth-child(2){
+line-height: .6rem;
+font-size: .6rem;
+color: #00000066;
+font-weight: 400;
+margin-top: .5rem;
+}
+.mu2{
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+}
+a{
+    text-decoration: none;
+}
+.w1{
+    display: flex;
+}
